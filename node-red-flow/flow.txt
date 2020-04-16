@@ -228,6 +228,17 @@
         "collapse": false
     },
     {
+        "id": "aacaa53a.0fc228",
+        "type": "ui_group",
+        "z": "",
+        "name": "Gráficos",
+        "tab": "6fa8ba7f.807044",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "a8475cdd.a8ba6",
         "type": "debug",
         "z": "c766e6fe.926478",
@@ -239,7 +250,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 740,
-        "y": 300,
+        "y": 360,
         "wires": []
     },
     {
@@ -331,7 +342,8 @@
             [
                 "b1bb0085.520e8",
                 "2d8d4938.4b3bd6",
-                "6bc86672.8d5f88"
+                "6bc86672.8d5f88",
+                "a91f03aa.bd739"
             ]
         ]
     },
@@ -348,7 +360,8 @@
         "wires": [
             [
                 "fe45c4f2.891128",
-                "a8475cdd.a8ba6"
+                "a8475cdd.a8ba6",
+                "d9f19160.b0ef9"
             ]
         ]
     },
@@ -375,7 +388,7 @@
         "seg1": "",
         "seg2": "",
         "x": 750,
-        "y": 240,
+        "y": 300,
         "wires": []
     },
     {
@@ -731,10 +744,10 @@
         "payload": "send_data_tago",
         "payloadType": "str",
         "repeat": "",
-        "crontab": "",
+        "crontab": "*/30 10-18 * * 1,2,3,4,5",
         "once": false,
         "onceDelay": 0.1,
-        "x": 140,
+        "x": 150,
         "y": 640,
         "wires": [
             [
@@ -802,11 +815,11 @@
         "topic": "",
         "payload": "send_data_node",
         "payloadType": "str",
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 140,
+        "x": 130,
         "y": 760,
         "wires": [
             [
@@ -818,6 +831,7 @@
         "id": "264d034a.623d0c",
         "type": "ui_button",
         "z": "c766e6fe.926478",
+        "d": true,
         "name": "",
         "group": "5b7dc12f.ea4",
         "order": 5,
@@ -838,6 +852,90 @@
             [
                 "12597e02.9842f2"
             ]
+        ]
+    },
+    {
+        "id": "a91f03aa.bd739",
+        "type": "ui_chart",
+        "z": "c766e6fe.926478",
+        "name": "",
+        "group": "aacaa53a.0fc228",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "label": "Umidade",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9f19160.b0ef9",
+        "type": "ui_chart",
+        "z": "c766e6fe.926478",
+        "name": "",
+        "group": "aacaa53a.0fc228",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 240,
+        "wires": [
+            []
         ]
     }
 ]
