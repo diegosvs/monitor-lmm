@@ -1,6 +1,8 @@
 /*
- * Programa: código-fonte do dispositivo IoT usado no curso
- * Autor: Pedro Bertoleti
+ * Programa: código para ESP8266 com aplicação para aquisição de DHT22
+ * Autor: Diego Silva Viana dos Santos
+ * Laboratório de Metrologia Mecânica -IPT
+ * 
  */
 #include <stdio.h>
 #include <ESP8266WiFi.h>
@@ -24,32 +26,33 @@
 #define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 
-/* Definicoes da UART de debug */
+/* Definicoes da UART de debug para NodeMCU v2, setar bauderate para 9600 */
 #define DEBUG_UART_BAUDRATE               9600
 
-/* MQTT definitions */
+/* MQTT definitions - tópico padrão para publicação no broker da TAGO.IO*/
 #define MQTT_PUB_TOPIC "tago/data/post"
 
-#define MQTT_USERNAME  "LMM-TU-001"  /* Coloque aqui qualquer valor */
+/*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
+#define MQTT_USERNAME  "LMM-TU-001"  /* nome do dispositivo cadastrado */
 #define MQTT_PASSWORD  "810d0849-ca82-466b-9da1-9b5792bb18be"  /* coloque aqui o Device Token do seu dispositivo no Tago.io */
 
 /* WIFI */
-const char* ssid_wifi = "******";     /*  WI-FI network SSID (name) you want to connect */
-const char* password_wifi = "******"; /*  WI-FI network password */
+const char* ssid_wifi = "******";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
+const char* password_wifi = "******"; /*  SENHA DA REDE WIFI */
 WiFiClient espClient;     
 
 /* MQTT */
 const char* broker_mqtt = "mqtt.tago.io"; /* MQTT broker URL */
-int broker_port = 1883;                      /* MQTT broker port */
+int broker_port = 1883;                      /* MQTT broker port - PADRÃO DA PLATAFORMA */
 PubSubClient MQTT(espClient); 
-bool ledteste = true;
-/*
- * Variáveis e objetos globais
- */
+
+
+bool ledteste = true; // VARIAVEL GLOBAL PARA TESTE DO LED INTERNO DA PLACA
+ 
 /* objeto para comunicação com sensor DHT22  */
 DHT dht(DHTPIN, DHTTYPE);
 
-/* Prototypes */
+/* PROTÓTIPOS DAS FUNCOES UTILIZADAS*/
 void init_wifi(void);
 void init_MQTT(void);
 void connect_MQTT(void);
@@ -100,29 +103,20 @@ void connect_wifi(void)
     Serial.println(WiFi.localIP());
   }
 
-/* Funcao: verifica e garante conexao wi-fi
- * Parametros: nenhum
- * Retorno: nenhum 
- */
+/* Funcao: verifica e garante conexao wi-fi*/
 void verify_wifi_connection(void)
 {
     connect_wifi(); 
 }
 
-/* Funcao: inicializa variaveis do MQTT para conexao com broker
- * Parametros: nenhum
- * Retorno: nenhum 
- */
+/* Funcao: inicializa variaveis do MQTT para conexao com broker */
 void init_MQTT(void)
 {
     MQTT.setServer(broker_mqtt, broker_port);
     MQTT.setCallback(callback);
 }
 
-/* Funcao: conecta com broker MQTT (se nao ha conexao ativa)
- * Parametros: nenhum
- * Retorno: nenhum 
- */
+/* Funcao: conecta com broker MQTT (se nao ha conexao ativa)*/
 void connect_MQTT(void) 
 {
     char mqtt_id_randomico[5] = {0}; //não utilizado para fixar um id por dispositivo
@@ -153,44 +147,24 @@ void connect_MQTT(void)
     }
 }
 
-/* Funcao: verifica e garante conexao MQTT
- * Parametros: nenhum
- * Retorno: nenhum 
- */
+/* Funcao: verifica e garante conexao MQTT  */
 void verify_mqtt_connection(void)
   {
     connect_MQTT();  
   }
 
-/* Funcao: envia informacoes para plataforma IoT (Tago.io) via MQTT
- * Parametros: nenhum
- * Retorno: nenhum
- */
-
-/*
-JSON a ser enviado para Tago.io:
-
-{
-    "variable": "nome_da_variavel",
-    "unit"    : "unidade",
-    "value"   : valor
-}
-*/
-
-
+/* Funcao: checa os tópicos enviados para o esp8266 para interação com o broker */
  void callback(String topic, unsigned char* message, unsigned int length) {
 
-  String messageTemp;
+  String messageTemp; 
   
   for (int i = 0; i < length; i++) {
     
     messageTemp += (char)message[i];
-  }
-  
-  
+  }  
 
-  // If a message is received on the topic room/lamp, you check if the message is either on or off. Turns the lamp GPIO according to the message
-  if(topic=="LEDPLACA")
+
+  if(topic=="LEDPLACA") //topico que checa se o botao de teste do dashboard do led interno foi pressionado
       {
   
       if(messageTemp == "ligar" )
@@ -205,7 +179,7 @@ JSON a ser enviado para Tago.io:
         }
       }  
 
-  else if(topic=="datatago")
+  else if(topic=="datatago") //recebe o topico que aciona a funcao de envio de valores para o broker
       {
   
       if(messageTemp == "send_data_tago" )
@@ -214,7 +188,7 @@ JSON a ser enviado para Tago.io:
         }     
       }
 
-  else if(topic=="datanode")
+  else if(topic=="datanode") //recebe o topico que aciona a funcao de envio de valores para o dashboard
       {
   
       if(messageTemp == "send_data_node" )
@@ -224,9 +198,16 @@ JSON a ser enviado para Tago.io:
       }
        
   }
-  
 
+/* Funcao: envia informacoes para plataforma TAGO.IO via MQTT - o seguinte padrão deve ser obedecido:
+JSON a ser enviado para Tago.io:
 
+{
+    "variable": "nome_da_variavel",
+    "unit"    : "unidade",
+    "value"   : valor
+}
+*/
 void send_data_tago(void) 
   {
    StaticJsonDocument<250> tago_json_temperature;
@@ -269,7 +250,8 @@ void send_data_tago(void)
    //MQTT.publish("lab/umidade", String(umidade_lida).c_str(), true);
   
   }
-
+  
+/* Funcao: envia os valores para o dashboard da ibmcloud desenvolvido em node-red*/
 void send_data_nodered(void)
   {
    float temperatura_lida = dht.readTemperature();
@@ -279,9 +261,10 @@ void send_data_nodered(void)
    MQTT.publish("umidade", String(umidade_lida).c_str(), true);
   }
 
+
 //ThreadController cpu;
-//Thread threadFuncaoTago;
-//Thread threadFuncaoDashboard;
+//Thread threadFuncaoTago; //thread de envio de dados para tago.io
+//Thread threadFuncaoDashboard; //thread de envio de dados para dashboard ibmcloud
 
 
 void setup() 
@@ -289,7 +272,9 @@ void setup()
     /* UARTs setup */  
     Serial.begin(DEBUG_UART_BAUDRATE);
     pinMode(BUILTIN_LED, OUTPUT);
-    digitalWrite(LED_BUILTIN, HIGH);
+    
+    digitalWrite(LED_BUILTIN, HIGH); //instancia o led interno da placa para teste
+    
     /* Inicializa comunicacao com sensor DHT22 */
     dht.begin();
 
@@ -319,14 +304,16 @@ void loop()
     
     verify_wifi_connection();
     verify_mqtt_connection();
-   // cpu.run(); // começa a rodar as threads declaradas
-    MQTT.loop();
-    /* Faz o envio da temperatura e umidade para a plataforma IoT (Tago.io) */
    
+   // cpu.run(); // começa a rodar as threads declaradas
+    
+    MQTT.loop(); //checa se alguma mensagem chegou via publish
+    
+    /* Faz o envio da temperatura e umidade para a plataforma IoT (Tago.io) */   
     //send_data_tago();  
     //delay(TEMPO_ENVIO_INFORMACOES);
     
-/* Faz o envio da temperatura e umidade para o dashboard no node-red */
+    /* Faz o envio da temperatura e umidade para o dashboard no node-red */
     //send_data_nodered();
     //delay(TEMPO_ENVIO_INFORMACOES);
   }
