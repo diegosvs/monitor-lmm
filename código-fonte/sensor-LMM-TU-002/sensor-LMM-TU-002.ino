@@ -33,8 +33,8 @@
 #define MQTT_PUB_TOPIC "tago/data/post"
 
 /*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
-#define MQTT_USERNAME  "LMM-TU-001"  /* nome do dispositivo cadastrado */
-#define MQTT_PASSWORD  "810d0849-ca82-466b-9da1-9b5792bb18be"  /* coloque aqui o Device Token do seu dispositivo no Tago.io */
+#define MQTT_USERNAME  "LMM-TU-002"  /* nome do dispositivo cadastrado */
+#define MQTT_PASSWORD  " "  /* coloque aqui o Device Token do seu dispositivo no Tago.io */
 
 /* WIFI */
 const char* ssid_wifi = "******";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
@@ -120,7 +120,7 @@ void init_MQTT(void)
 void connect_MQTT(void) 
 {
     char mqtt_id_randomico[5] = {0}; //não utilizado para fixar um id por dispositivo
-    const char* mqtt_id = "1111";
+    const char* mqtt_id = "2222";
 
     while (!MQTT.connected()) 
     {
