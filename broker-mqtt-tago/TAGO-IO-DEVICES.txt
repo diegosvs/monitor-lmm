@@ -1,0 +1,24 @@
+ENDEREÇO DO BROKER "mqtt.tago.io"
+PORTA "1883"
+TÓPICO PADRÃO PUBLISH "tago/data/post"
+
+publish topics:
+	umidade
+	temperatura
+	umidade/min
+	umidade/max
+	temperatura/min
+	temperatura/max
+
+subscrib topics:
+	datatago
+	datanode
+	LEDPLACA
+
+
+DISPOSITIVOS CADASTRADOS:
+LMM-TU-001 --> ID 1111
+LMM-TU-002 --> ID 2222
+LMM-TU-003 --> ID 3333
+LMM-TU-004 --> ID 4444
+LMM-TU-005 --> ID 5555
