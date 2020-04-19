@@ -1,0 +1,8 @@
+Dimensões: 23mm x 12mm x 5mm (incluindo terminais)
+Alimentação: 3,0 a 5,0 VDC (5,5 Vdc máximo)
+Corrente: 200uA a 500mA, em stand by de 100uA a 150 uA
+Faixa de medição de umidade: 20 a 90% UR
+Faixa de medição de temperatura: 0º a 50ºC
+Precisão de umidade de medição: ± 5,0% UR
+Precisão de medição de temperatura: ± 2.0 ºC
+Tempo de resposta: < 5s

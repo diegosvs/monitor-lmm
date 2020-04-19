@@ -1,0 +1,9 @@
+Tensão de operação 	3-5VDC (5,5VDC máximo) 
+Faixa de medição de umidade 	0 a 100% UR
+Faixa de medição de temperatura 	-40º a +80ºC 
+Corrente	2,5mA max durante uso, em stand by de 100uA a 150 uA 
+Precisão de umidade de medição	± 2,0% UR
+Precisão de medição de temperatura 	± 0,5 ºC
+Resolução	0,1
+Tempo de resposta	2s
+Dimensões	25 x 15 7mm (sem terminais)

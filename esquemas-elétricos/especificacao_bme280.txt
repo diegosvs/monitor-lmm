@@ -1,0 +1,10 @@
+Faixa de medição de pressão: 300 a 1100 hPA;
+Temperatura de operação: -40º a 85ºC;
+Tensão de operação: 1,8 à 3,6 VDC (Máx. 50mVpp de ripple);
+Corrente de consumo: 2,7uA;
+Precisão relativa de medição de pressão: ± 0,12 hPa;
+Precisão de medição de temperatura: ± 1ºC;
+Sinal de Saída: Interface I2C e SPI;
+Dimensões: 12 x 15 mm;
+Massa: 1g;
+Humidity Range: 0% to 100% rel. humidity
