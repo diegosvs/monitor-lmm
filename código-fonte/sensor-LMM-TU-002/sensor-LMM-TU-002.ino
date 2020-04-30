@@ -13,7 +13,7 @@
 #include "ThreadController.h"
 
 /* Definicoes gerais */
-#define TEMPO_ENVIO_INFORMACOES    1000 //ms
+//#define TEMPO_ENVIO_INFORMACOES    5000 //ms
 
 /* Definicoes do sensor de temperatura */
 #define DHTPIN  4   /* GPIO que o pino 2 do sensor é conectado */
@@ -30,15 +30,17 @@
 #define DEBUG_UART_BAUDRATE               9600
 
 /* MQTT definitions - tópico padrão para publicação no broker da TAGO.IO*/
-#define MQTT_PUB_TOPIC "tago/data/post"
+//#define MQTT_PUB_TOPIC "tago/data/post"
+#define MQTT_PUB_UMID "tagodata/umidade" //topico para umidade
+#define MQTT_PUB_TEMP "tagodata/temperatura" //topico para temperatura
 
 /*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
 #define MQTT_USERNAME  "LMM-TU-002"  /* nome do dispositivo cadastrado */
-#define MQTT_PASSWORD  " "  /* coloque aqui o Device Token do seu dispositivo no Tago.io */
+#define MQTT_PASSWORD  "XXXXXXXXXXXXXXXXXXXXXXX"  /* coloque aqui o Device Token do seu dispositivo no Tago.io */
 
 /* WIFI */
 const char* ssid_wifi = "******";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
-const char* password_wifi = "******"; /*  SENHA DA REDE WIFI */
+const char* password_wifi = "XXXXXXXXX"; /*  SENHA DA REDE WIFI */
 WiFiClient espClient;     
 
 /* MQTT */
@@ -62,7 +64,7 @@ void verify_mqtt_connection(void);
 void send_data_iot_platform(void);
 void send_data_tago(void);
 void send_data_nodered(void);
-void callback(String topic, byte* message, unsigned int length);
+void callback(String topic, byte* payload, unsigned int length);
 
 
 /* Funcao: inicializa conexao wi-fi
@@ -120,7 +122,7 @@ void init_MQTT(void)
 void connect_MQTT(void) 
 {
     char mqtt_id_randomico[5] = {0}; //não utilizado para fixar um id por dispositivo
-    const char* mqtt_id = "2222";
+    const char* mqtt_id = "1111";
 
     while (!MQTT.connected()) 
     {
@@ -154,15 +156,19 @@ void verify_mqtt_connection(void)
   }
 
 /* Funcao: checa os tópicos enviados para o esp8266 para interação com o broker */
- void callback(String topic, unsigned char* message, unsigned int length) {
+ void callback(String topic, byte* payload, unsigned int length) {
 
   String messageTemp; 
   
-  for (int i = 0; i < length; i++) {
-    
-    messageTemp += (char)message[i];
+  for (int i = 0; i < length; i++) {     
+     
+    messageTemp += (char)payload[i];
   }  
-
+  
+    //Serial.print(messageTemp);
+    //Serial.println();
+    //Serial.print(topic);
+    //Serial.println();
 
   if(topic=="LEDPLACA") //topico que checa se o botao de teste do dashboard do led interno foi pressionado
       {
@@ -185,6 +191,7 @@ void verify_mqtt_connection(void)
       if(messageTemp == "send_data_tago" )
         {
           send_data_tago();
+          
         }     
       }
 
@@ -194,6 +201,7 @@ void verify_mqtt_connection(void)
       if(messageTemp == "send_data_node" )
         {
           send_data_nodered();
+            
         }     
       }
        
@@ -218,7 +226,7 @@ void send_data_tago(void)
    int i;
 
    /* Imprime medicoes de temperatura e umidade (para debug) */
-   for (i=0; i<80; i++)
+   for (i=0; i<20; i++)
        Serial.println(" ");
        
    Serial.println("----------");
@@ -235,7 +243,7 @@ void send_data_tago(void)
    tago_json_temperature["value"] = temperatura_lida;
    memset(json_string, 0, sizeof(json_string));
    serializeJson(tago_json_temperature, json_string);
-   MQTT.publish(MQTT_PUB_TOPIC, json_string);
+   MQTT.publish(MQTT_PUB_TEMP, json_string);
    //MQTT.publish("temperatura", json_string);
    //MQTT.publish("lab/temperatura", String(temperatura_lida).c_str(), true);
 
@@ -245,7 +253,7 @@ void send_data_tago(void)
    tago_json_humidity["value"] = umidade_lida;
    memset(json_string, 0, sizeof(json_string));
    serializeJson(tago_json_humidity, json_string);
-   MQTT.publish(MQTT_PUB_TOPIC, json_string);
+   MQTT.publish(MQTT_PUB_UMID, json_string);
    //MQTT.publish("umidade", json_string);
    //MQTT.publish("lab/umidade", String(umidade_lida).c_str(), true);
   
@@ -257,8 +265,8 @@ void send_data_nodered(void)
    float temperatura_lida = dht.readTemperature();
    float umidade_lida = dht.readHumidity();
 
-   MQTT.publish("temperatura", String(temperatura_lida).c_str(), true);
-   MQTT.publish("umidade", String(umidade_lida).c_str(), true);
+   MQTT.publish("device/temperatura", String(temperatura_lida).c_str(), true);
+   MQTT.publish("device/umidade", String(umidade_lida).c_str(), true);
   }
 
 
@@ -305,8 +313,8 @@ void loop()
     verify_wifi_connection();
     verify_mqtt_connection();
    
-   // cpu.run(); // começa a rodar as threads declaradas
-    
+   //cpu.run(); // começa a rodar as threads declaradas
+     
     MQTT.loop(); //checa se alguma mensagem chegou via publish
     
     /* Faz o envio da temperatura e umidade para a plataforma IoT (Tago.io) */   
