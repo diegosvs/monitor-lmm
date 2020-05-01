@@ -1,19 +1,22 @@
 ENDEREÇO DO BROKER "mqtt.tago.io"
 PORTA "1883"
-TÓPICO PADRÃO PUBLISH "tago/data/post"
 
 publish topics:
-	umidade
-	temperatura
+	device/maxmin
 	umidade/min
 	umidade/max
 	temperatura/min
 	temperatura/max
 
 subscrib topics:
+	tagodata/umidade
+	tagodata/temperatura
+	device/umidade
+	device/temperatura
 	datatago
 	datanode
 	LEDPLACA
+	device/maxmin
 
 
 DISPOSITIVOS CADASTRADOS:
