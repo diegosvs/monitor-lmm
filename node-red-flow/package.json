@@ -16,7 +16,9 @@
         "node-red-node-cf-cloudant": "0.x",
         "node-red-node-openwhisk": "0.x",
         "node-red-node-watson": "0.9.2",
-        "node-red-nodes-cf-sqldb-dashdb": "0.x"
+        "node-red-nodes-cf-sqldb-dashdb": "0.x",
+	"node-red-contrib-mqtt-broker": "0.2.5", // MOSCA broker para node-red
+	"node-red-node-serialport": "0.10.1" // testes para porta serial
     },
     "scripts": {
         "start": "node --max-old-space-size=160 index.js --settings ./bluemix-settings.js -v"
