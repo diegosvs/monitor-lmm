@@ -94,8 +94,12 @@ void connect_wifi(void)
     
     while (WiFi.status() != WL_CONNECTED) 
     {
+        //delay(100);
+        //Serial.print(".");
+        digitalWrite(LED_BUILTIN, LOW);
         delay(100);
-        Serial.print(".");
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(400);        
     }
   
     Serial.println();
@@ -142,9 +146,13 @@ void connect_MQTT(void)
         } 
         else 
         {
-            Serial.println("Falha na tentativa de conexao com broker MQTT.");
-            Serial.println("Nova tentativa em 2s...");
-            delay(2000);
+            //Serial.println("Falha na tentativa de conexao com broker MQTT.");
+            //Serial.println("Nova tentativa em 2s...");
+            //delay(2000);
+            digitalWrite(LED_BUILTIN, LOW);
+            delay(1000);
+            digitalWrite(LED_BUILTIN, HIGH);
+            delay(1000);
         }
     }
 }
