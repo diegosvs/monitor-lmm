@@ -42,6 +42,13 @@
         "info": ""
     },
     {
+        "id": "5bd5ac37.0bad24",
+        "type": "tab",
+        "label": "store data on file",
+        "disabled": true,
+        "info": ""
+    },
+    {
         "id": "59f6b7d8.cf6ef8",
         "type": "ui_base",
         "theme": {
@@ -651,7 +658,7 @@
         "type": "debug",
         "z": "44ce7882.ac1eb8",
         "name": "temperatureConsole",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -694,9 +701,9 @@
         "name": "mqtt_humidity_value",
         "topic": "device/umidade",
         "qos": "0",
-        "datatype": "utf8",
+        "datatype": "auto",
         "broker": "deace95e.2a4878",
-        "x": 150,
+        "x": 130,
         "y": 160,
         "wires": [
             [
@@ -709,7 +716,7 @@
         "type": "debug",
         "z": "44ce7882.ac1eb8",
         "name": "humidityConsole",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -726,7 +733,7 @@
         "name": "mqtt_temperature_value",
         "topic": "device/temperatura",
         "qos": "0",
-        "datatype": "utf8",
+        "datatype": "auto",
         "broker": "deace95e.2a4878",
         "x": 130,
         "y": 340,
@@ -873,7 +880,7 @@
         "type": "ui_date_picker",
         "z": "6b782816.ce73a8",
         "name": "calendarDashboard",
-        "label": "date",
+        "label": "",
         "group": "5b4069fb.1d5338",
         "order": 2,
         "width": 0,
@@ -1152,7 +1159,7 @@
         "payload": "send_data_tago",
         "payloadType": "str",
         "repeat": "",
-        "crontab": "*/15 6-19 * * 1,2,3,4,5",
+        "crontab": "*/30 1-20 * * 1,2,3,4,5,6",
         "once": false,
         "onceDelay": 0.1,
         "x": 160,
@@ -1274,7 +1281,7 @@
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "step",
+        "interpolate": "cubic",
         "nodata": "",
         "dot": false,
         "ymin": "0",
@@ -1284,6 +1291,7 @@
         "removeOlderUnit": "86400",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#5ed29b",
             "#aec7e8",
@@ -1316,7 +1324,7 @@
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "bezier",
+        "interpolate": "monotone",
         "nodata": "",
         "dot": false,
         "ymin": "0",
@@ -1326,6 +1334,7 @@
         "removeOlderUnit": "604800",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#e7bb61",
             "#aec7e8",
@@ -1721,7 +1730,7 @@
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "step",
+        "interpolate": "cubic",
         "nodata": "",
         "dot": false,
         "ymin": "0",
@@ -1731,6 +1740,7 @@
         "removeOlderUnit": "86400",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#5ed29b",
             "#aec7e8",
@@ -1763,7 +1773,7 @@
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "bezier",
+        "interpolate": "cubic",
         "nodata": "",
         "dot": false,
         "ymin": "0",
@@ -1773,6 +1783,7 @@
         "removeOlderUnit": "604800",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#e7bb61",
             "#aec7e8",
@@ -1865,7 +1876,7 @@
         "type": "ui_date_picker",
         "z": "6b782816.ce73a8",
         "name": "calendarDashboard",
-        "label": "date",
+        "label": "",
         "group": "7c5cba8e.45b484",
         "order": 2,
         "width": 7,
@@ -1912,6 +1923,7 @@
         "id": "ead22f99.5ba2c",
         "type": "mqtt in",
         "z": "44ce7882.ac1eb8",
+        "d": true,
         "name": "",
         "topic": "device/temperatura",
         "qos": "0",
@@ -1943,7 +1955,7 @@
         "name": "mqtt_humidity_value",
         "topic": "device/umidade",
         "qos": "0",
-        "datatype": "utf8",
+        "datatype": "auto",
         "broker": "8370a510.14e478",
         "x": 170,
         "y": 160,
@@ -1960,7 +1972,7 @@
         "name": "mqtt_temperature_value",
         "topic": "device/temperatura",
         "qos": "0",
-        "datatype": "utf8",
+        "datatype": "auto",
         "broker": "8370a510.14e478",
         "x": 150,
         "y": 340,
@@ -1984,6 +1996,7 @@
         "id": "f6f83917.e127a8",
         "type": "mqtt in",
         "z": "24aa9548.a4326a",
+        "d": true,
         "name": "",
         "topic": "device/temperatura",
         "qos": "0",
@@ -2017,7 +2030,7 @@
         "payload": "send_data_tago",
         "payloadType": "str",
         "repeat": "",
-        "crontab": "*/20 6-19 * * 1,2,3,4,5",
+        "crontab": "*/20 2-20 * * 1,2,3,4,5,6",
         "once": false,
         "onceDelay": 0.1,
         "x": 180,
@@ -4113,31 +4126,125 @@
         ]
     },
     {
-        "id": "abdae42a.8be348",
+        "id": "412372c9.778a7c",
         "type": "function",
-        "z": "6b782816.ce73a8",
-        "name": "save a data to a directory",
-        "func": "msg.filename=\"/home/pi/logs/sensors.txt\";\nreturn msg;",
+        "z": "5bd5ac37.0bad24",
+        "name": "Modify Payload",
+        "func": "var d = new Date();\nvar t = d.getTime();\npayload={\"time\":t,\"payload\":msg.payload,\"topic\":msg.topic};\n//msg.payload=JSON.stringify(payload);\nmsg.payload=payload;\n//msg.filename=\"/home/pi/logs/s1.txt\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 250,
-        "y": 540,
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "2d73909a.178f8"
+            ]
+        ]
+    },
+    {
+        "id": "2d73909a.178f8",
+        "type": "csv",
+        "z": "5bd5ac37.0bad24",
+        "name": "",
+        "sep": ",",
+        "hdrin": false,
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "x": 495,
+        "y": 315,
         "wires": [
             []
         ]
     },
     {
-        "id": "709110f7.767ba",
+        "id": "cc1189a9.2c2018",
+        "type": "inject",
+        "z": "5bd5ac37.0bad24",
+        "name": "testopic",
+        "topic": "testtopic",
+        "payload": "test message",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "x": 287,
+        "y": 298,
+        "wires": [
+            [
+                "412372c9.778a7c"
+            ]
+        ]
+    },
+    {
+        "id": "a498e753.358398",
+        "type": "debug",
+        "z": "5bd5ac37.0bad24",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "990cc405.946b78",
+        "type": "inject",
+        "z": "5bd5ac37.0bad24",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 260,
+        "y": 540,
+        "wires": [
+            [
+                "a8b0641d.d392a8"
+            ]
+        ]
+    },
+    {
+        "id": "a8b0641d.d392a8",
         "type": "function",
-        "z": "6b782816.ce73a8",
-        "name": "Modify Payload to a file",
-        "func": "var d = new Date();\nvar t = d.getTime();\npayload={\"time\":t,\"payload\":msg.payload,\"topic\":msg.topic};\n//msg.payload=JSON.stringify(payload);\nmsg.payload=payload;\n//msg.filename=\"/home/pi/logs/s1.txt\";\nreturn msg;",
+        "z": "5bd5ac37.0bad24",
+        "name": "",
+        "func": "msg.filename=\"/home/pi/logs/sensors.txt\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 250,
-        "y": 600,
+        "x": 435,
+        "y": 534,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ac59863e.0a9de8",
+        "type": "comment",
+        "z": "5bd5ac37.0bad24",
+        "name": "node file",
+        "info": "",
+        "x": 640,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b053ca86.96b388",
+        "type": "comment",
+        "z": "5bd5ac37.0bad24",
+        "name": "node file in",
+        "info": "",
+        "x": 580,
+        "y": 540,
+        "wires": []
     }
 ]
