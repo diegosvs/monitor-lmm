@@ -1,0 +1,2 @@
+após instalação do node.js
+executar pelo cmd "npm install -g --unsafe-perm node-red"
