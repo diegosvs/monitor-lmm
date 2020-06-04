@@ -1,9 +1,10 @@
-https://www.arduino.cc/en/Reference/WiFi
-https://github.com/adafruit/Adafruit_CircuitPlayground
-https://github.com/adafruit/Adafruit_Sensor
-https://arduinojson.org/?utm_source=meta&utm_medium=library.properties - BENOIT BLANCHON
-https://github.com/ivanseidel/ArduinoThread
-https://github.com/adafruit/DHT-sensor-library
-https://github.com/plapointe6/EspMQTTClient
-https://pubsubclient.knolleary.net/
-https://github.com/adafruit/Adafruit_BME280_Library
+https://www.arduino.cc/en/Reference/WiFi - wifi by arduino
+https://github.com/adafruit/Adafruit_CircuitPlayground - Circuit Playground by adafruit
+https://github.com/adafruit/Adafruit_Sensor 
+https://arduinojson.org/?utm_source=meta&utm_medium=library.properties - by BENOIT BLANCHON
+https://github.com/ivanseidel/ArduinoThread - byIvanSeidel
+https://github.com/adafruit/DHT-sensor-library by adafruit
+https://github.com/plapointe6/EspMQTTClient - espmqttclient by patrick lapointe
+https://pubsubclient.knolleary.net/ - pubsubclient by nick O'Leary 
+https://github.com/adafruit/Adafruit_BME280_Library - Adafruit BME280 Library, by adafruit 
+http://arduino.esp8266.com/stable/package_esp8266com_index.json --> COLAR NA ABA DE PREFERÊNCIAS PARA INSTALAR PLACA ESP8266
