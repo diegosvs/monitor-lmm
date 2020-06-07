@@ -1,2 +1,9 @@
 após instalação do node.js
 executar pelo cmd "npm install -g --unsafe-perm node-red"
+
+criação de senha para acesso ao flow no servidor
+executar pelo cmd:
+npm install -g node-red-admin
+node-red-admin hash-pw
+
+"escrever a senha, gerar hash, copiar e colar no arquivo settings na área de Securing Node-RED"
