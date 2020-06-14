@@ -28,17 +28,17 @@
         "info": ""
     },
     {
-        "id": "6fe5a682.06fbe8",
+        "id": "67f25d02.06ff34",
         "type": "tab",
-        "label": "BROKER",
+        "label": "LMM-TU-004",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "67f25d02.06ff34",
+        "id": "e55125f4.810118",
         "type": "tab",
-        "label": "LMM-TU-004",
-        "disabled": true,
+        "label": "LMM-TU-005",
+        "disabled": false,
         "info": ""
     },
     {
@@ -49,10 +49,10 @@
         "info": ""
     },
     {
-        "id": "e55125f4.810118",
+        "id": "6fe5a682.06fbe8",
         "type": "tab",
-        "label": "LMM-TU-005",
-        "disabled": true,
+        "label": "BROKER",
+        "disabled": false,
         "info": ""
     },
     {
@@ -171,7 +171,7 @@
         "tab": "cf01b78e.ff5a78",
         "order": 1,
         "disp": true,
-        "width": "7",
+        "width": 9,
         "collapse": false
     },
     {
@@ -180,20 +180,9 @@
         "z": "",
         "name": "Relógio",
         "tab": "cf01b78e.ff5a78",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": "7",
-        "collapse": false
-    },
-    {
-        "id": "801d8d91.fb49",
-        "type": "ui_group",
-        "z": "",
-        "name": "Máximos e Mínimos",
-        "tab": "cf01b78e.ff5a78",
-        "order": 4,
-        "disp": true,
-        "width": "7",
+        "width": 9,
         "collapse": false
     },
     {
@@ -202,9 +191,9 @@
         "z": "",
         "name": "Gráficos",
         "tab": "cf01b78e.ff5a78",
-        "order": 2,
+        "order": 3,
         "disp": true,
-        "width": "8",
+        "width": 9,
         "collapse": false
     },
     {
@@ -225,7 +214,7 @@
         "tab": "16b99657.dbd92a",
         "order": 1,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -234,20 +223,9 @@
         "z": "",
         "name": "Gráficos",
         "tab": "16b99657.dbd92a",
-        "order": 2,
+        "order": 3,
         "disp": true,
-        "width": 8,
-        "collapse": false
-    },
-    {
-        "id": "f4bb0836.749d78",
-        "type": "ui_group",
-        "z": "",
-        "name": "Máximos e Mínimos",
-        "tab": "16b99657.dbd92a",
-        "order": 4,
-        "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -256,9 +234,9 @@
         "z": "",
         "name": "Relógio",
         "tab": "16b99657.dbd92a",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -282,7 +260,8 @@
         "closePayload": "",
         "willTopic": "",
         "willQos": "0",
-        "willPayload": ""
+        "willPayload": "",
+        "info": "node caso o broker da Tago.IO seja utilizado. Necssário configurar login do dispositivo e sua respectiva senha (token)"
     },
     {
         "id": "7ab56d38.effd44",
@@ -316,7 +295,7 @@
         "tab": "d60c41e6.c1d26",
         "order": 1,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -343,25 +322,14 @@
         "willPayload": ""
     },
     {
-        "id": "daf853c6.48868",
-        "type": "ui_group",
-        "z": "",
-        "name": "Máximos e Mínimos",
-        "tab": "d60c41e6.c1d26",
-        "order": 4,
-        "disp": true,
-        "width": 7,
-        "collapse": false
-    },
-    {
         "id": "ffbfefec.a440e",
         "type": "ui_group",
         "z": "",
         "name": "Gráficos",
         "tab": "d60c41e6.c1d26",
-        "order": 2,
+        "order": 3,
         "disp": true,
-        "width": 8,
+        "width": 9,
         "collapse": false
     },
     {
@@ -382,7 +350,7 @@
         "tab": "fb3962a6.8649",
         "order": 1,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -409,25 +377,14 @@
         "willPayload": ""
     },
     {
-        "id": "7351199e.64e668",
-        "type": "ui_group",
-        "z": "",
-        "name": "Máximos e Mínimos",
-        "tab": "fb3962a6.8649",
-        "order": 4,
-        "disp": true,
-        "width": 7,
-        "collapse": false
-    },
-    {
         "id": "db28ee05.869e4",
         "type": "ui_group",
         "z": "",
         "name": "Gráficos",
         "tab": "fb3962a6.8649",
-        "order": 2,
+        "order": 3,
         "disp": true,
-        "width": 8,
+        "width": 9,
         "collapse": false
     },
     {
@@ -448,7 +405,7 @@
         "tab": "56054be0.05aa84",
         "order": 1,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -475,25 +432,14 @@
         "willPayload": ""
     },
     {
-        "id": "78e7738a.8eda4c",
-        "type": "ui_group",
-        "z": "",
-        "name": "Máximos e Mínimos",
-        "tab": "56054be0.05aa84",
-        "order": 4,
-        "disp": true,
-        "width": 7,
-        "collapse": false
-    },
-    {
         "id": "c14fb35a.f348e",
         "type": "ui_group",
         "z": "",
         "name": "Gráficos",
         "tab": "56054be0.05aa84",
-        "order": 2,
+        "order": 3,
         "disp": true,
-        "width": 8,
+        "width": 9,
         "collapse": false
     },
     {
@@ -512,9 +458,9 @@
         "z": "",
         "name": "Relógio",
         "tab": "d60c41e6.c1d26",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -523,9 +469,9 @@
         "z": "",
         "name": "Relógio",
         "tab": "fb3962a6.8649",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -534,9 +480,9 @@
         "z": "",
         "name": "Relógio",
         "tab": "56054be0.05aa84",
-        "order": 3,
+        "order": 2,
         "disp": true,
-        "width": 7,
+        "width": 9,
         "collapse": false
     },
     {
@@ -628,6 +574,28 @@
         "willPayload": ""
     },
     {
+        "id": "a174e7c.25c4118",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "BROKER005",
+        "broker": "127.0.0.1",
+        "port": "1887",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
         "id": "e18824e5.2a7258",
         "type": "debug",
         "z": "5882d3ef.c1d02c",
@@ -649,8 +617,8 @@
         "name": "humidityDashboard",
         "group": "40768182.7484e",
         "order": 1,
-        "width": 7,
-        "height": 6,
+        "width": 0,
+        "height": 0,
         "gtype": "wave",
         "title": "Umidade",
         "label": "%",
@@ -672,12 +640,12 @@
         "id": "e5d07a65.d03d58",
         "type": "mqtt in",
         "z": "5882d3ef.c1d02c",
-        "name": "mqtt_humidity_value",
+        "name": "recebeUmidadeDoDispositivo",
         "topic": "device/umidade",
         "qos": "0",
         "datatype": "auto",
         "broker": "e6e41f81.30568",
-        "x": 110,
+        "x": 140,
         "y": 140,
         "wires": [
             [
@@ -704,12 +672,12 @@
         "id": "2ab2684a.1cdc68",
         "type": "mqtt in",
         "z": "5882d3ef.c1d02c",
-        "name": "mqtt_temperature_value",
+        "name": "recebeTemperaturaDoDispositivo",
         "topic": "device/temperatura",
         "qos": "0",
         "datatype": "auto",
         "broker": "e6e41f81.30568",
-        "x": 130,
+        "x": 150,
         "y": 340,
         "wires": [
             [
@@ -919,232 +887,32 @@
         ]
     },
     {
-        "id": "171730ff.d557af",
-        "type": "mqtt in",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "temperatura_maxima",
-        "topic": "temperatura/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "7ab56d38.effd44",
-        "x": 120,
-        "y": 460,
-        "wires": [
-            [
-                "ce6ce89c.eea778"
-            ]
-        ]
-    },
-    {
-        "id": "97251268.ccc61",
-        "type": "mqtt in",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "temperatura_minima",
-        "topic": "temperatura/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "7ab56d38.effd44",
-        "x": 130,
-        "y": 520,
-        "wires": [
-            [
-                "4461ec3b.0c12c4"
-            ]
-        ]
-    },
-    {
-        "id": "ce6ce89c.eea778",
-        "type": "json",
-        "z": "5882d3ef.c1d02c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 460,
-        "wires": [
-            [
-                "8c20e00c.cf229"
-            ]
-        ]
-    },
-    {
-        "id": "4461ec3b.0c12c4",
-        "type": "json",
-        "z": "5882d3ef.c1d02c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 520,
-        "wires": [
-            [
-                "96c5e2bd.724f3"
-            ]
-        ]
-    },
-    {
-        "id": "8c20e00c.cf229",
-        "type": "ui_text",
-        "z": "5882d3ef.c1d02c",
-        "group": "801d8d91.fb49",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 500,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "96c5e2bd.724f3",
-        "type": "ui_text",
-        "z": "5882d3ef.c1d02c",
-        "group": "801d8d91.fb49",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 500,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "9444211d.ae19d",
-        "type": "mqtt in",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "umidade_maxima",
-        "topic": "umidade/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "7ab56d38.effd44",
-        "x": 140,
-        "y": 580,
-        "wires": [
-            [
-                "7e91a82c.6d4cd8"
-            ]
-        ]
-    },
-    {
-        "id": "ff2053fb.44022",
-        "type": "mqtt in",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "umidade_minima",
-        "topic": "umidade/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "7ab56d38.effd44",
-        "x": 140,
-        "y": 640,
-        "wires": [
-            [
-                "4db8b598.c4645c"
-            ]
-        ]
-    },
-    {
-        "id": "7e91a82c.6d4cd8",
-        "type": "json",
-        "z": "5882d3ef.c1d02c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 580,
-        "wires": [
-            [
-                "15fd7e4e.92f772"
-            ]
-        ]
-    },
-    {
-        "id": "4db8b598.c4645c",
-        "type": "json",
-        "z": "5882d3ef.c1d02c",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 640,
-        "wires": [
-            [
-                "ae271ed4.6e29"
-            ]
-        ]
-    },
-    {
-        "id": "15fd7e4e.92f772",
-        "type": "ui_text",
-        "z": "5882d3ef.c1d02c",
-        "group": "801d8d91.fb49",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 500,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "ae271ed4.6e29",
-        "type": "ui_text",
-        "z": "5882d3ef.c1d02c",
-        "group": "801d8d91.fb49",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 500,
-        "y": 640,
-        "wires": []
-    },
-    {
         "id": "3505b9bc.f270e6",
         "type": "mqtt out",
         "z": "5882d3ef.c1d02c",
-        "name": "",
+        "name": "gravarDadosAquisitadosNoBroker",
         "topic": "datatago",
         "qos": "0",
         "retain": "true",
         "broker": "e6e41f81.30568",
-        "x": 500,
-        "y": 760,
+        "x": 580,
+        "y": 520,
         "wires": []
     },
     {
         "id": "5affb384.5fb32c",
         "type": "inject",
         "z": "5882d3ef.c1d02c",
-        "name": "Grava Dados na Plataforma",
+        "name": "Gravar Dados na Plataforma",
         "topic": "",
         "payload": "send_data_tago",
         "payloadType": "str",
         "repeat": "",
-        "crontab": "*/15 12-19 * * 1,2,3,4,5",
+        "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 160,
-        "y": 760,
+        "x": 220,
+        "y": 520,
         "wires": [
             [
                 "3505b9bc.f270e6"
@@ -1155,13 +923,13 @@
         "id": "2ba1dc89.8c20d4",
         "type": "mqtt out",
         "z": "5882d3ef.c1d02c",
-        "name": "",
+        "name": "tertarLedInterno",
         "topic": "LEDPLACA",
         "qos": "0",
         "retain": "true",
         "broker": "e6e41f81.30568",
-        "x": 510,
-        "y": 880,
+        "x": 520,
+        "y": 640,
         "wires": []
     },
     {
@@ -1182,8 +950,8 @@
         "payload": "ligar",
         "payloadType": "str",
         "topic": "",
-        "x": 190,
-        "y": 880,
+        "x": 250,
+        "y": 640,
         "wires": [
             [
                 "2ba1dc89.8c20d4"
@@ -1194,20 +962,20 @@
         "id": "8ecce20f.a5be6",
         "type": "mqtt out",
         "z": "5882d3ef.c1d02c",
-        "name": "",
+        "name": "imprimirDadosNoDashboard",
         "topic": "datanode",
         "qos": "0",
         "retain": "true",
         "broker": "e6e41f81.30568",
-        "x": 500,
-        "y": 820,
+        "x": 560,
+        "y": 580,
         "wires": []
     },
     {
         "id": "d4941ff1.8b14a",
         "type": "inject",
         "z": "5882d3ef.c1d02c",
-        "name": "Atualiza Dashboard",
+        "name": "Atualizar Dashboard",
         "topic": "",
         "payload": "send_data_node",
         "payloadType": "str",
@@ -1215,38 +983,11 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 180,
-        "y": 820,
+        "x": 240,
+        "y": 580,
         "wires": [
             [
                 "8ecce20f.a5be6"
-            ]
-        ]
-    },
-    {
-        "id": "d03cbb14.f89b28",
-        "type": "ui_button",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "",
-        "group": "801d8d91.fb49",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Atualizar",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 200,
-        "y": 1000,
-        "wires": [
-            [
-                "d4bec1a6.a2a8f"
             ]
         ]
     },
@@ -1257,8 +998,8 @@
         "name": "",
         "group": "bddd4c6a.6e601",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 9,
+        "height": 5,
         "label": "Umidade",
         "chartType": "line",
         "legend": "false",
@@ -1300,8 +1041,8 @@
         "name": "",
         "group": "bddd4c6a.6e601",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": 9,
+        "height": 5,
         "label": "Temperatura",
         "chartType": "line",
         "legend": "false",
@@ -1348,7 +1089,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 780,
-        "y": 400,
+        "y": 440,
         "wires": []
     },
     {
@@ -1358,8 +1099,8 @@
         "name": "humidityDashboard",
         "group": "84f2085f.a81d98",
         "order": 1,
-        "width": 7,
-        "height": 6,
+        "width": 0,
+        "height": 0,
         "gtype": "wave",
         "title": "Umidade",
         "label": "%",
@@ -1420,7 +1161,7 @@
         "action": "",
         "pretty": false,
         "x": 420,
-        "y": 340,
+        "y": 380,
         "wires": [
             [
                 "7efaabdf.cd9f64",
@@ -1452,7 +1193,7 @@
         "seg1": "",
         "seg2": "",
         "x": 790,
-        "y": 340,
+        "y": 380,
         "wires": []
     },
     {
@@ -1502,206 +1243,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "82280911.3960e8",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "temperatura_maxima",
-        "topic": "temperatura/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "e7039c24.8f67c",
-        "x": 160,
-        "y": 460,
-        "wires": [
-            [
-                "75c61bae.15bb74"
-            ]
-        ]
-    },
-    {
-        "id": "212b83fb.342cac",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "temperatura_minima",
-        "topic": "temperatura/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "e7039c24.8f67c",
-        "x": 150,
-        "y": 520,
-        "wires": [
-            [
-                "166b1285.f6d65d"
-            ]
-        ]
-    },
-    {
-        "id": "75c61bae.15bb74",
-        "type": "json",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 460,
-        "wires": [
-            [
-                "7dee443d.090b3c"
-            ]
-        ]
-    },
-    {
-        "id": "166b1285.f6d65d",
-        "type": "json",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 520,
-        "wires": [
-            [
-                "2d606e8e.9cbb62"
-            ]
-        ]
-    },
-    {
-        "id": "7dee443d.090b3c",
-        "type": "ui_text",
-        "z": "b5491f04.a79a7",
-        "group": "f4bb0836.749d78",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 540,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "2d606e8e.9cbb62",
-        "type": "ui_text",
-        "z": "b5491f04.a79a7",
-        "group": "f4bb0836.749d78",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 540,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "f32e0147.4cd97",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "umidade_maxima",
-        "topic": "umidade/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "e7039c24.8f67c",
-        "x": 140,
-        "y": 580,
-        "wires": [
-            [
-                "2edaca6.0f10536"
-            ]
-        ]
-    },
-    {
-        "id": "a34b7afa.67a8d8",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "umidade_minima",
-        "topic": "umidade/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "e7039c24.8f67c",
-        "x": 140,
-        "y": 640,
-        "wires": [
-            [
-                "2557550a.be4faa"
-            ]
-        ]
-    },
-    {
-        "id": "2edaca6.0f10536",
-        "type": "json",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 580,
-        "wires": [
-            [
-                "128bf26b.4fa42e"
-            ]
-        ]
-    },
-    {
-        "id": "2557550a.be4faa",
-        "type": "json",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 640,
-        "wires": [
-            [
-                "b1b9eb0d.18f518"
-            ]
-        ]
-    },
-    {
-        "id": "128bf26b.4fa42e",
-        "type": "ui_text",
-        "z": "b5491f04.a79a7",
-        "group": "f4bb0836.749d78",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 540,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "b1b9eb0d.18f518",
-        "type": "ui_text",
-        "z": "b5491f04.a79a7",
-        "group": "f4bb0836.749d78",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 540,
-        "y": 640,
-        "wires": []
     },
     {
         "id": "cddd8ede.11ae8",
@@ -1784,7 +1325,7 @@
         "useOldStyle": false,
         "outputs": 1,
         "x": 750,
-        "y": 280,
+        "y": 320,
         "wires": [
             []
         ]
@@ -1807,38 +1348,11 @@
         "payload": "ligar",
         "payloadType": "str",
         "topic": "",
-        "x": 210,
-        "y": 880,
+        "x": 250,
+        "y": 680,
         "wires": [
             [
-                "b9b82063.1a7b2"
-            ]
-        ]
-    },
-    {
-        "id": "1b5f83f8.d1296c",
-        "type": "ui_button",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "",
-        "group": "f4bb0836.749d78",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Atualizar",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 240,
-        "y": 940,
-        "wires": [
-            [
-                "dbae0700.30b558"
+                "4cea303d.cc7a"
             ]
         ]
     },
@@ -1900,245 +1414,11 @@
         "func": "msg.payload = msg.payload + 1.2;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 390,
-        "y": 60,
+        "x": 450,
+        "y": 80,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "f7e31a02.95b1a8",
-        "type": "mqtt in",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "buffer",
-        "broker": "7ab56d38.effd44",
-        "x": 150,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d4bec1a6.a2a8f",
-        "type": "mqtt out",
-        "z": "5882d3ef.c1d02c",
-        "d": true,
-        "name": "",
-        "topic": "device/maxmin",
-        "qos": "0",
-        "retain": "true",
-        "broker": "7ab56d38.effd44",
-        "x": 560,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "1c81a480.9c5adc",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "name": "mqtt_humidity_value",
-        "topic": "device/umidade",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "b5e55ac7.74f088",
-        "x": 170,
-        "y": 160,
-        "wires": [
-            [
-                "9b5ce25b.c246a"
-            ]
-        ]
-    },
-    {
-        "id": "8e5f988d.32d2f8",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "name": "mqtt_temperature_value",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "b5e55ac7.74f088",
-        "x": 150,
-        "y": 340,
-        "wires": [
-            [
-                "a004c24.bdc054"
-            ]
-        ]
-    },
-    {
-        "id": "b9f19e56.a5e63",
-        "type": "comment",
-        "z": "b5491f04.a79a7",
-        "name": "subscrib mode to devices",
-        "info": "mqtt subscrib como buffer, começará como erro de recepção, mas logo desencadeará a recepcao normal dos payloads. ",
-        "x": 170,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "6cad14b6.99660c",
-        "type": "mqtt in",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "buffer",
-        "broker": "e7039c24.8f67c",
-        "x": 170,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2ad835ff.ded31a",
-        "type": "mqtt out",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "topic": "datatago",
-        "qos": "0",
-        "retain": "",
-        "broker": "b5e55ac7.74f088",
-        "x": 540,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "1df846b7.fc9149",
-        "type": "inject",
-        "z": "b5491f04.a79a7",
-        "name": "Grava Dados na Plataforma",
-        "topic": "",
-        "payload": "send_data_tago",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "*/12 13-17 * * 1,2,3,4,5",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 180,
-        "y": 760,
-        "wires": [
-            [
-                "2ad835ff.ded31a"
-            ]
-        ]
-    },
-    {
-        "id": "6ac246bc.599a78",
-        "type": "inject",
-        "z": "b5491f04.a79a7",
-        "name": "Atualiza Dashboard",
-        "topic": "",
-        "payload": "send_data_node",
-        "payloadType": "str",
-        "repeat": "13",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 200,
-        "y": 820,
-        "wires": [
-            [
-                "e2103b2a.71f108"
-            ]
-        ]
-    },
-    {
-        "id": "e2103b2a.71f108",
-        "type": "mqtt out",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "topic": "datanode",
-        "qos": "0",
-        "retain": "",
-        "broker": "b5e55ac7.74f088",
-        "x": 520,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "b9b82063.1a7b2",
-        "type": "mqtt out",
-        "z": "b5491f04.a79a7",
-        "name": "",
-        "topic": "LEDPLACA",
-        "qos": "0",
-        "retain": "",
-        "broker": "b5e55ac7.74f088",
-        "x": 530,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "dbae0700.30b558",
-        "type": "mqtt out",
-        "z": "b5491f04.a79a7",
-        "d": true,
-        "name": "",
-        "topic": "device/maxmin",
-        "qos": "0",
-        "retain": "",
-        "broker": "e7039c24.8f67c",
-        "x": 540,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "d287a961.50f6c8",
-        "type": "comment",
-        "z": "5882d3ef.c1d02c",
-        "name": "subscrib mode to devices",
-        "info": "mqtt subscrib como buffer, começará como erro de recepção, mas logo desencadeará a recepcao normal dos payloads. ",
-        "x": 150,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "9295e137.e602",
-        "type": "ui_button",
-        "z": "62c928af.0b8338",
-        "d": true,
-        "name": "",
-        "group": "40768182.7484e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Mandar Email",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 200,
-        "y": 620,
-        "wires": [
-            [
-                "73c97e68.4262b"
-            ]
-        ]
-    },
-    {
-        "id": "73c97e68.4262b",
-        "type": "mqtt out",
-        "z": "62c928af.0b8338",
-        "d": true,
-        "name": "",
-        "topic": "device/email",
-        "qos": "0",
-        "retain": "true",
-        "broker": "7ab56d38.effd44",
-        "x": 430,
-        "y": 620,
-        "wires": []
     },
     {
         "id": "4a4f6556.dcc5fc",
@@ -2162,8 +1442,8 @@
         "name": "humidityDashboard",
         "group": "eafc48ee.aaf218",
         "order": 1,
-        "width": 7,
-        "height": 6,
+        "width": 0,
+        "height": 0,
         "gtype": "wave",
         "title": "Umidade",
         "label": "%",
@@ -2240,8 +1520,8 @@
         "name": "temperatureDashboard",
         "group": "eafc48ee.aaf218",
         "order": 2,
-        "width": 7,
-        "height": 5,
+        "width": 9,
+        "height": 6,
         "gtype": "gage",
         "title": "Temperatura",
         "label": "ºC",
@@ -2306,206 +1586,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "96e3c890.456f48",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "temperatura_maxima",
-        "topic": "temperatura/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "d315b886.e694d8",
-        "x": 140,
-        "y": 580,
-        "wires": [
-            [
-                "688f1ce2.136dd4"
-            ]
-        ]
-    },
-    {
-        "id": "bf7ce703.e3a0a8",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "temperatura_minima",
-        "topic": "temperatura/min",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d315b886.e694d8",
-        "x": 130,
-        "y": 640,
-        "wires": [
-            [
-                "65cc8365.185a3c"
-            ]
-        ]
-    },
-    {
-        "id": "688f1ce2.136dd4",
-        "type": "json",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 350,
-        "y": 580,
-        "wires": [
-            [
-                "9dafab22.3ab488"
-            ]
-        ]
-    },
-    {
-        "id": "65cc8365.185a3c",
-        "type": "json",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 350,
-        "y": 640,
-        "wires": [
-            [
-                "b3aa9497.dfd6e8"
-            ]
-        ]
-    },
-    {
-        "id": "9dafab22.3ab488",
-        "type": "ui_text",
-        "z": "520c4980.3dda68",
-        "group": "daf853c6.48868",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 520,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "b3aa9497.dfd6e8",
-        "type": "ui_text",
-        "z": "520c4980.3dda68",
-        "group": "daf853c6.48868",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 520,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "418c2edf.d0805",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "umidade_maxima",
-        "topic": "umidade/max",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d315b886.e694d8",
-        "x": 120,
-        "y": 700,
-        "wires": [
-            [
-                "34277dfd.2d2272"
-            ]
-        ]
-    },
-    {
-        "id": "8b9b92f3.ef07e",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "umidade_minima",
-        "topic": "umidade/min",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "d315b886.e694d8",
-        "x": 120,
-        "y": 760,
-        "wires": [
-            [
-                "27e9dd31.82f1f2"
-            ]
-        ]
-    },
-    {
-        "id": "34277dfd.2d2272",
-        "type": "json",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 350,
-        "y": 700,
-        "wires": [
-            [
-                "97a99309.36cac"
-            ]
-        ]
-    },
-    {
-        "id": "27e9dd31.82f1f2",
-        "type": "json",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 350,
-        "y": 760,
-        "wires": [
-            [
-                "cd917cfb.d544"
-            ]
-        ]
-    },
-    {
-        "id": "97a99309.36cac",
-        "type": "ui_text",
-        "z": "520c4980.3dda68",
-        "group": "daf853c6.48868",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 520,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "cd917cfb.d544",
-        "type": "ui_text",
-        "z": "520c4980.3dda68",
-        "group": "daf853c6.48868",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 520,
-        "y": 760,
-        "wires": []
     },
     {
         "id": "c20ab6.f4cec548",
@@ -2611,191 +1691,11 @@
         "payload": "ligar",
         "payloadType": "str",
         "topic": "",
-        "x": 150,
-        "y": 980,
+        "x": 250,
+        "y": 680,
         "wires": [
             [
-                "37d14943.498a56"
-            ]
-        ]
-    },
-    {
-        "id": "6b96d58.0de772c",
-        "type": "ui_button",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "",
-        "group": "daf853c6.48868",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Atualizar",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 160,
-        "y": 1060,
-        "wires": [
-            [
-                "318d8ebf.a16d52"
-            ]
-        ]
-    },
-    {
-        "id": "befa8d55.811c5",
-        "type": "mqtt out",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "topic": "datatago",
-        "qos": "0",
-        "retain": "",
-        "broker": "309444b8.8cdedc",
-        "x": 500,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "6d49f5aa.a7494c",
-        "type": "inject",
-        "z": "520c4980.3dda68",
-        "name": "Grava Dados na Plataforma",
-        "topic": "",
-        "payload": "send_data_tago",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "*/20 12-20 * * 1,2,3,4,5",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 160,
-        "y": 860,
-        "wires": [
-            [
-                "befa8d55.811c5"
-            ]
-        ]
-    },
-    {
-        "id": "cfa42238.5ec1e",
-        "type": "inject",
-        "z": "520c4980.3dda68",
-        "name": "Atualiza Dashboard",
-        "topic": "",
-        "payload": "send_data_node",
-        "payloadType": "str",
-        "repeat": "7",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 160,
-        "y": 920,
-        "wires": [
-            [
-                "59358df8.56e0b4"
-            ]
-        ]
-    },
-    {
-        "id": "59358df8.56e0b4",
-        "type": "mqtt out",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "topic": "datanode",
-        "qos": "0",
-        "retain": "true",
-        "broker": "309444b8.8cdedc",
-        "x": 500,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "37d14943.498a56",
-        "type": "mqtt out",
-        "z": "520c4980.3dda68",
-        "name": "",
-        "topic": "LEDPLACA",
-        "qos": "0",
-        "retain": "true",
-        "broker": "309444b8.8cdedc",
-        "x": 510,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "318d8ebf.a16d52",
-        "type": "mqtt out",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "",
-        "topic": "device/maxmin",
-        "qos": "0",
-        "retain": "",
-        "broker": "d315b886.e694d8",
-        "x": 500,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "1b2a123b.d283ae",
-        "type": "comment",
-        "z": "520c4980.3dda68",
-        "name": "subscrib mode of the devices",
-        "info": "mqtt subscrib como buffer, começará como erro de recepção, mas logo desencadeará a recepcao normal dos payloads. ",
-        "x": 160,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "fde144b.e35d1b8",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "d": true,
-        "name": "",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "buffer",
-        "broker": "d315b886.e694d8",
-        "x": 110,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d6f0c784.32a648",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "name": "mqtt_humidity_value",
-        "topic": "device/umidade",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "309444b8.8cdedc",
-        "x": 110,
-        "y": 140,
-        "wires": [
-            [
-                "7d5db777.4d4768"
-            ]
-        ]
-    },
-    {
-        "id": "9f55aa8d.56d618",
-        "type": "mqtt in",
-        "z": "520c4980.3dda68",
-        "name": "mqtt_temperature_value",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "utf8",
-        "broker": "309444b8.8cdedc",
-        "x": 130,
-        "y": 380,
-        "wires": [
-            [
-                "6656282c.9508e8"
+                "d26b7dee.21c24"
             ]
         ]
     },
@@ -2811,7 +1711,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 780,
-        "y": 460,
+        "y": 400,
         "wires": []
     },
     {
@@ -2821,8 +1721,8 @@
         "name": "humidityDashboard",
         "group": "1774247e.77c90c",
         "order": 1,
-        "width": 7,
-        "height": 6,
+        "width": 0,
+        "height": 0,
         "gtype": "wave",
         "title": "Umidade",
         "label": "%",
@@ -2883,7 +1783,7 @@
         "action": "",
         "pretty": false,
         "x": 460,
-        "y": 400,
+        "y": 340,
         "wires": [
             [
                 "95719140.2328b",
@@ -2899,8 +1799,8 @@
         "name": "temperatureDashboard",
         "group": "1774247e.77c90c",
         "order": 2,
-        "width": 7,
-        "height": 5,
+        "width": 0,
+        "height": 0,
         "gtype": "gage",
         "title": "Temperatura",
         "label": "ºC",
@@ -2915,7 +1815,7 @@
         "seg1": "",
         "seg2": "",
         "x": 790,
-        "y": 400,
+        "y": 340,
         "wires": []
     },
     {
@@ -2961,210 +1861,10 @@
         "outputs": 1,
         "noerr": 0,
         "x": 270,
-        "y": 340,
+        "y": 280,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "281982e6.3aefbe",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "temperatura_maxima",
-        "topic": "temperatura/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "aac978d7.b83268",
-        "x": 180,
-        "y": 600,
-        "wires": [
-            [
-                "472f1ae9.aae8d4"
-            ]
-        ]
-    },
-    {
-        "id": "1b4f8a5b.6925a6",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "temperatura_minima",
-        "topic": "temperatura/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "aac978d7.b83268",
-        "x": 170,
-        "y": 660,
-        "wires": [
-            [
-                "757e8852.c6eef8"
-            ]
-        ]
-    },
-    {
-        "id": "472f1ae9.aae8d4",
-        "type": "json",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 390,
-        "y": 600,
-        "wires": [
-            [
-                "7d3c46b.fccbfb8"
-            ]
-        ]
-    },
-    {
-        "id": "757e8852.c6eef8",
-        "type": "json",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 390,
-        "y": 660,
-        "wires": [
-            [
-                "df37ef5b.55fc7"
-            ]
-        ]
-    },
-    {
-        "id": "7d3c46b.fccbfb8",
-        "type": "ui_text",
-        "z": "67f25d02.06ff34",
-        "group": "7351199e.64e668",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 580,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "df37ef5b.55fc7",
-        "type": "ui_text",
-        "z": "67f25d02.06ff34",
-        "group": "7351199e.64e668",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 580,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "c4cc3238.8c1e6",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "umidade_maxima",
-        "topic": "umidade/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "aac978d7.b83268",
-        "x": 160,
-        "y": 720,
-        "wires": [
-            [
-                "78d58530.a4549c"
-            ]
-        ]
-    },
-    {
-        "id": "24175280.b4ee4e",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "umidade_minima",
-        "topic": "umidade/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "aac978d7.b83268",
-        "x": 160,
-        "y": 780,
-        "wires": [
-            [
-                "67805277.1dd62c"
-            ]
-        ]
-    },
-    {
-        "id": "78d58530.a4549c",
-        "type": "json",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 390,
-        "y": 720,
-        "wires": [
-            [
-                "dafd118b.7695e"
-            ]
-        ]
-    },
-    {
-        "id": "67805277.1dd62c",
-        "type": "json",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 390,
-        "y": 780,
-        "wires": [
-            [
-                "bffb4005.4cbfa"
-            ]
-        ]
-    },
-    {
-        "id": "dafd118b.7695e",
-        "type": "ui_text",
-        "z": "67f25d02.06ff34",
-        "group": "7351199e.64e668",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 580,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "bffb4005.4cbfa",
-        "type": "ui_text",
-        "z": "67f25d02.06ff34",
-        "group": "7351199e.64e668",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 580,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "a1449788.e4a4b8",
@@ -3173,13 +1873,13 @@
         "name": "",
         "group": "db28ee05.869e4",
         "order": 1,
-        "width": 8,
+        "width": 9,
         "height": 5,
         "label": "Umidade",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "step",
+        "interpolate": "linear",
         "nodata": "",
         "dot": false,
         "ymin": "0",
@@ -3189,6 +1889,7 @@
         "removeOlderUnit": "86400",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#5ed29b",
             "#aec7e8",
@@ -3215,13 +1916,13 @@
         "name": "",
         "group": "db28ee05.869e4",
         "order": 2,
-        "width": 8,
+        "width": 9,
         "height": 5,
         "label": "Temperatura",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "bezier",
+        "interpolate": "monotone",
         "nodata": "",
         "dot": false,
         "ymin": "0",
@@ -3231,6 +1932,7 @@
         "removeOlderUnit": "604800",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#e7bb61",
             "#aec7e8",
@@ -3245,7 +1947,7 @@
         "useOldStyle": false,
         "outputs": 1,
         "x": 750,
-        "y": 340,
+        "y": 280,
         "wires": [
             []
         ]
@@ -3268,191 +1970,11 @@
         "payload": "ligar",
         "payloadType": "str",
         "topic": "",
-        "x": 230,
-        "y": 960,
+        "x": 210,
+        "y": 640,
         "wires": [
             [
-                "560d8a1f.9e5954"
-            ]
-        ]
-    },
-    {
-        "id": "79fe8dd8.653d44",
-        "type": "ui_button",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "",
-        "group": "7351199e.64e668",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Atualizar",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 220,
-        "y": 1020,
-        "wires": [
-            [
-                "92c8a2b9.3e1c6"
-            ]
-        ]
-    },
-    {
-        "id": "61972275.f4755c",
-        "type": "mqtt out",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "topic": "datatago",
-        "qos": "0",
-        "retain": "",
-        "broker": "26e8caec.ac6336",
-        "x": 540,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "eb68ffe6.174fd",
-        "type": "inject",
-        "z": "67f25d02.06ff34",
-        "name": "Grava Dados na Plataforma",
-        "topic": "",
-        "payload": "send_data_tago",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 200,
-        "y": 840,
-        "wires": [
-            [
-                "61972275.f4755c"
-            ]
-        ]
-    },
-    {
-        "id": "c1daa896.8885d8",
-        "type": "inject",
-        "z": "67f25d02.06ff34",
-        "name": "Atualiza Dashboard",
-        "topic": "",
-        "payload": "send_data_node",
-        "payloadType": "str",
-        "repeat": "7",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 220,
-        "y": 900,
-        "wires": [
-            [
-                "98ad3d64.a651b"
-            ]
-        ]
-    },
-    {
-        "id": "98ad3d64.a651b",
-        "type": "mqtt out",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "topic": "datanode",
-        "qos": "0",
-        "retain": "",
-        "broker": "26e8caec.ac6336",
-        "x": 540,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "560d8a1f.9e5954",
-        "type": "mqtt out",
-        "z": "67f25d02.06ff34",
-        "name": "",
-        "topic": "LEDPLACA",
-        "qos": "0",
-        "retain": "",
-        "broker": "26e8caec.ac6336",
-        "x": 550,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "92c8a2b9.3e1c6",
-        "type": "mqtt out",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "",
-        "topic": "device/maxmin",
-        "qos": "0",
-        "retain": "",
-        "broker": "aac978d7.b83268",
-        "x": 560,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "6269e74d.f6f168",
-        "type": "comment",
-        "z": "67f25d02.06ff34",
-        "name": "subscrib mode of the devices",
-        "info": "mqtt subscrib como buffer, começará como erro de recepção, mas logo desencadeará a recepcao normal dos payloads. ",
-        "x": 440,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "7e5cf11e.7d3c5",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "d": true,
-        "name": "",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "buffer",
-        "broker": "aac978d7.b83268",
-        "x": 150,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1682f216.59518e",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "name": "mqtt_humidity_value",
-        "topic": "device/umidade",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "26e8caec.ac6336",
-        "x": 170,
-        "y": 100,
-        "wires": [
-            [
-                "53f0fe38.649f9"
-            ]
-        ]
-    },
-    {
-        "id": "cd27174c.251938",
-        "type": "mqtt in",
-        "z": "67f25d02.06ff34",
-        "name": "mqtt_temperature_value",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "26e8caec.ac6336",
-        "x": 150,
-        "y": 400,
-        "wires": [
-            [
-                "595d276c.c9f168"
+                "6af9c9c0.2f5b48"
             ]
         ]
     },
@@ -3478,8 +2000,8 @@
         "name": "humidityDashboard",
         "group": "a9167712.66c088",
         "order": 1,
-        "width": 7,
-        "height": 6,
+        "width": 0,
+        "height": 0,
         "gtype": "wave",
         "title": "Umidade",
         "label": "%",
@@ -3556,8 +2078,8 @@
         "name": "temperatureDashboard",
         "group": "a9167712.66c088",
         "order": 2,
-        "width": 7,
-        "height": 5,
+        "width": 0,
+        "height": 0,
         "gtype": "gage",
         "title": "Temperatura",
         "label": "ºC",
@@ -3587,8 +2109,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 510,
-        "y": 320,
+        "x": 550,
+        "y": 260,
         "wires": []
     },
     {
@@ -3622,202 +2144,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "2d896ae0.d9f676",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "name": "temperatura_maxima",
-        "topic": "temperatura/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "14f2ba8e.a61945",
-        "x": 160,
-        "y": 580,
-        "wires": [
-            [
-                "c653319f.77ba8"
-            ]
-        ]
-    },
-    {
-        "id": "2445594f.cc3f96",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "name": "temperatura_minima",
-        "topic": "temperatura/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "14f2ba8e.a61945",
-        "x": 150,
-        "y": 640,
-        "wires": [
-            [
-                "37a981ac.4786fe"
-            ]
-        ]
-    },
-    {
-        "id": "c653319f.77ba8",
-        "type": "json",
-        "z": "e55125f4.810118",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 580,
-        "wires": [
-            [
-                "5fb8175d.260718"
-            ]
-        ]
-    },
-    {
-        "id": "37a981ac.4786fe",
-        "type": "json",
-        "z": "e55125f4.810118",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 640,
-        "wires": [
-            [
-                "9d355dea.acc8a"
-            ]
-        ]
-    },
-    {
-        "id": "5fb8175d.260718",
-        "type": "ui_text",
-        "z": "e55125f4.810118",
-        "group": "78e7738a.8eda4c",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 540,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "9d355dea.acc8a",
-        "type": "ui_text",
-        "z": "e55125f4.810118",
-        "group": "78e7738a.8eda4c",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}ºC",
-        "layout": "row-center",
-        "x": 540,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "585f1536.4c1eac",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "name": "umidade_maxima",
-        "topic": "umidade/max",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "14f2ba8e.a61945",
-        "x": 140,
-        "y": 700,
-        "wires": [
-            [
-                "780121cc.59d75"
-            ]
-        ]
-    },
-    {
-        "id": "c5b69601.f3c258",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "name": "umidade_minima",
-        "topic": "umidade/min",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "14f2ba8e.a61945",
-        "x": 140,
-        "y": 760,
-        "wires": [
-            [
-                "f6c1de96.f5ad5"
-            ]
-        ]
-    },
-    {
-        "id": "780121cc.59d75",
-        "type": "json",
-        "z": "e55125f4.810118",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 700,
-        "wires": [
-            [
-                "ac655845.9f5b28"
-            ]
-        ]
-    },
-    {
-        "id": "f6c1de96.f5ad5",
-        "type": "json",
-        "z": "e55125f4.810118",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 760,
-        "wires": [
-            [
-                "b8953dc4.aa979"
-            ]
-        ]
-    },
-    {
-        "id": "ac655845.9f5b28",
-        "type": "ui_text",
-        "z": "e55125f4.810118",
-        "group": "78e7738a.8eda4c",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Máxima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 540,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "b8953dc4.aa979",
-        "type": "ui_text",
-        "z": "e55125f4.810118",
-        "group": "78e7738a.8eda4c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Mínima",
-        "format": "{{msg.payload}}%",
-        "layout": "row-center",
-        "x": 540,
-        "y": 760,
-        "wires": []
     },
     {
         "id": "d1eb4b8a.645d68",
@@ -3923,190 +2249,11 @@
         "payload": "ligar",
         "payloadType": "str",
         "topic": "",
-        "x": 150,
-        "y": 1040,
+        "x": 230,
+        "y": 680,
         "wires": [
             [
-                "a01e73e9.aa0c5"
-            ]
-        ]
-    },
-    {
-        "id": "bd3d6f7.cb6689",
-        "type": "ui_button",
-        "z": "e55125f4.810118",
-        "d": true,
-        "name": "",
-        "group": "78e7738a.8eda4c",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Atualizar",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 200,
-        "y": 1160,
-        "wires": [
-            [
-                "b9f54ba9.4e4b28"
-            ]
-        ]
-    },
-    {
-        "id": "bdabaf9b.4808c",
-        "type": "mqtt out",
-        "z": "e55125f4.810118",
-        "name": "",
-        "topic": "datatago",
-        "qos": "0",
-        "retain": "",
-        "broker": "14f2ba8e.a61945",
-        "x": 520,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "20434f2d.56975",
-        "type": "inject",
-        "z": "e55125f4.810118",
-        "name": "Grava Dados na Plataforma",
-        "topic": "",
-        "payload": "send_data_tago",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 140,
-        "y": 880,
-        "wires": [
-            [
-                "bdabaf9b.4808c"
-            ]
-        ]
-    },
-    {
-        "id": "99d46208.dfc42",
-        "type": "inject",
-        "z": "e55125f4.810118",
-        "name": "Atualiza Dashboard",
-        "topic": "",
-        "payload": "send_data_node",
-        "payloadType": "str",
-        "repeat": "7",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 140,
-        "y": 980,
-        "wires": [
-            [
-                "cd6f2eea.234f1"
-            ]
-        ]
-    },
-    {
-        "id": "cd6f2eea.234f1",
-        "type": "mqtt out",
-        "z": "e55125f4.810118",
-        "name": "",
-        "topic": "datanode",
-        "qos": "0",
-        "retain": "",
-        "broker": "14f2ba8e.a61945",
-        "x": 520,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "a01e73e9.aa0c5",
-        "type": "mqtt out",
-        "z": "e55125f4.810118",
-        "name": "",
-        "topic": "LEDPLACA",
-        "qos": "0",
-        "retain": "",
-        "broker": "14f2ba8e.a61945",
-        "x": 530,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "b9f54ba9.4e4b28",
-        "type": "mqtt out",
-        "z": "e55125f4.810118",
-        "name": "",
-        "topic": "device/maxmin",
-        "qos": "0",
-        "retain": "",
-        "broker": "14f2ba8e.a61945",
-        "x": 540,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "35920e59.bce372",
-        "type": "comment",
-        "z": "e55125f4.810118",
-        "name": "subscrib mode of the devices",
-        "info": "mqtt subscrib como buffer, começará como erro de recepção, mas logo desencadeará a recepcao normal dos payloads. ",
-        "x": 180,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "10a66b3a.722b75",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "d": true,
-        "name": "",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "buffer",
-        "broker": "14f2ba8e.a61945",
-        "x": 170,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9fa05775.88a0b8",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "name": "mqtt_humidity_value",
-        "topic": "device/umidade",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "14f2ba8e.a61945",
-        "x": 130,
-        "y": 160,
-        "wires": [
-            [
-                "4531699d.8563a8"
-            ]
-        ]
-    },
-    {
-        "id": "3deec366.93824c",
-        "type": "mqtt in",
-        "z": "e55125f4.810118",
-        "name": "mqtt_temperature_value",
-        "topic": "device/temperatura",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "14f2ba8e.a61945",
-        "x": 150,
-        "y": 400,
-        "wires": [
-            [
-                "b6b16a13.984f78"
+                "c69c41ed.8a4a1"
             ]
         ]
     },
@@ -4383,7 +2530,8 @@
             [
                 "82e8001.433b7"
             ]
-        ]
+        ],
+        "info": "recebe os dados de temperatura e umidade do dispositivo formatados para armazenamento local.\n"
     },
     {
         "id": "17ac648f.9ad76b",
@@ -4397,7 +2545,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 610,
-        "y": 300,
+        "y": 320,
         "wires": []
     },
     {
@@ -4409,7 +2557,7 @@
         "action": "",
         "pretty": false,
         "x": 290,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "e4238fda.63e81",
@@ -4431,7 +2579,7 @@
         "skip": "0",
         "strings": false,
         "x": 610,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "a9781aab.4c0388"
@@ -4449,7 +2597,7 @@
         "overwriteFile": "false",
         "encoding": "none",
         "x": 780,
-        "y": 160,
+        "y": 200,
         "wires": [
             []
         ]
@@ -4459,17 +2607,18 @@
         "type": "function",
         "z": "47cb9669.aaba48",
         "name": "formatStore",
-        "func": "var d = new Date();\nvar options = { \ntimeZone: 'America/Sao_Paulo', \nweekday: \"long\",\nday: '2-digit',\n//year:'numeric',\nmonth: 'short',\nhour: '2-digit', \nminute: '2-digit',\nsecond: '2-digit',\nhour12:false,\n};\n\nvar _resultDate = d.toLocaleDateString('pt-BR',options);\n//msg.payload = _resultDate.replace(',','');\n\npayload={\"data/hora\":_resultDate,\n\"umidade\":msg.payload.value_humidity,\n\"temperatura\":msg.payload.value_temperature,\n\"dispositivo\":msg.payload.device};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "func": "var d = new Date();\nvar options = { \ntimeZone: 'America/Sao_Paulo', \n//weekday: \"long\",\n//day: '2-digit',\n//year:'numeric',\n//month: 'short',\nhour: '2-digit', \nminute: '2-digit',\nsecond: '2-digit',\nhour12:false,\n};\n\nvar _resultDate = d.toLocaleDateString('pt-BR',options);\n//msg.payload = _resultDate.replace(',','');\n\npayload={\"data/hora\":_resultDate,\n\"umidade\":msg.payload.value_humidity,\n\"temperatura\":msg.payload.value_temperature,\n\"dispositivo\":msg.payload.device};\n\nmsg.payload=payload;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 450,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "7c27e2ab.4814fc",
                 "17ac648f.9ad76b"
             ]
-        ]
+        ],
+        "info": "acrescenta a informacao de data e hora na aquisicao dos valores do dispositivo.\nAqui, pode ser feito correção dos valores conforme certificado de calibração. "
     },
     {
         "id": "dff95b35.8a2988",
@@ -4483,7 +2632,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 410,
-        "y": 300,
+        "y": 320,
         "wires": []
     },
     {
@@ -4501,7 +2650,8 @@
             [
                 "82e8001.433b7"
             ]
-        ]
+        ],
+        "info": "recebe os dados de temperatura e umidade do dispositivo formatados para armazenamento local.\n"
     },
     {
         "id": "813a2993.dbf2f8",
@@ -4518,7 +2668,8 @@
             [
                 "82e8001.433b7"
             ]
-        ]
+        ],
+        "info": "recebe os dados de temperatura e umidade do dispositivo formatados para armazenamento local.\n"
     },
     {
         "id": "e2bcb199.2c674",
@@ -4535,6 +2686,590 @@
             [
                 "82e8001.433b7"
             ]
+        ],
+        "info": "recebe os dados de temperatura e umidade do dispositivo formatados para armazenamento local.\n"
+    },
+    {
+        "id": "4f3c1683.8a3168",
+        "type": "mosca in",
+        "z": "6fe5a682.06fbe8",
+        "mqtt_port": "1887",
+        "mqtt_ws_port": "8084",
+        "name": "DISPOSITIVO-005",
+        "username": "LMM-TU-005",
+        "password": "",
+        "dburl": "",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "785a1063.6e4bc"
+            ]
         ]
+    },
+    {
+        "id": "785a1063.6e4bc",
+        "type": "debug",
+        "z": "6fe5a682.06fbe8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 650,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ed712d59.d3e72",
+        "type": "mqtt in",
+        "z": "47cb9669.aaba48",
+        "name": "storeDevice005",
+        "topic": "tagodata/store",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "a174e7c.25c4118",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "82e8001.433b7"
+            ]
+        ],
+        "info": "recebe os dados de temperatura e umidade do dispositivo formatados para armazenamento local.\n"
+    },
+    {
+        "id": "b7d6e5d9.7257b8",
+        "type": "mqtt out",
+        "z": "b5491f04.a79a7",
+        "name": "gravarDadosAquisitadosNoBroker",
+        "topic": "datatago",
+        "qos": "0",
+        "retain": "true",
+        "broker": "b5e55ac7.74f088",
+        "x": 580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e5b04ef5.169a8",
+        "type": "inject",
+        "z": "b5491f04.a79a7",
+        "name": "Gravar Dados na Plataforma",
+        "topic": "",
+        "payload": "send_data_tago",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 220,
+        "y": 560,
+        "wires": [
+            [
+                "b7d6e5d9.7257b8"
+            ]
+        ]
+    },
+    {
+        "id": "4cea303d.cc7a",
+        "type": "mqtt out",
+        "z": "b5491f04.a79a7",
+        "name": "tertarLedInterno",
+        "topic": "LEDPLACA",
+        "qos": "0",
+        "retain": "true",
+        "broker": "b5e55ac7.74f088",
+        "x": 520,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "4013b3c9.2d0a3c",
+        "type": "mqtt out",
+        "z": "b5491f04.a79a7",
+        "name": "imprimirDadosNoDashboard",
+        "topic": "datanode",
+        "qos": "0",
+        "retain": "true",
+        "broker": "b5e55ac7.74f088",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a5d4fe6f.40b0b",
+        "type": "inject",
+        "z": "b5491f04.a79a7",
+        "name": "Atualizar Dashboard",
+        "topic": "",
+        "payload": "send_data_node",
+        "payloadType": "str",
+        "repeat": "11",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 240,
+        "y": 620,
+        "wires": [
+            [
+                "4013b3c9.2d0a3c"
+            ]
+        ]
+    },
+    {
+        "id": "2a8af79f.7106e8",
+        "type": "mqtt in",
+        "z": "b5491f04.a79a7",
+        "name": "recebeTemperaturaDoDispositivo",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "b5e55ac7.74f088",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "a004c24.bdc054"
+            ]
+        ]
+    },
+    {
+        "id": "76ce8ff3.aab4b",
+        "type": "mqtt in",
+        "z": "b5491f04.a79a7",
+        "name": "recebeUmidadeDoDispositivo",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "b5e55ac7.74f088",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "9b5ce25b.c246a"
+            ]
+        ]
+    },
+    {
+        "id": "e8ea91f4.1aafa",
+        "type": "mqtt out",
+        "z": "520c4980.3dda68",
+        "name": "gravarDadosAquisitadosNoBroker",
+        "topic": "datatago",
+        "qos": "0",
+        "retain": "true",
+        "broker": "309444b8.8cdedc",
+        "x": 580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cc7be881.9d4ec8",
+        "type": "inject",
+        "z": "520c4980.3dda68",
+        "name": "Gravar Dados na Plataforma",
+        "topic": "",
+        "payload": "send_data_tago",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 220,
+        "y": 560,
+        "wires": [
+            [
+                "e8ea91f4.1aafa"
+            ]
+        ]
+    },
+    {
+        "id": "d26b7dee.21c24",
+        "type": "mqtt out",
+        "z": "520c4980.3dda68",
+        "name": "tertarLedInterno",
+        "topic": "LEDPLACA",
+        "qos": "0",
+        "retain": "true",
+        "broker": "309444b8.8cdedc",
+        "x": 520,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "1efbbfe2.31d31",
+        "type": "mqtt out",
+        "z": "520c4980.3dda68",
+        "name": "imprimirDadosNoDashboard",
+        "topic": "datanode",
+        "qos": "0",
+        "retain": "true",
+        "broker": "309444b8.8cdedc",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "604a5485.b2062c",
+        "type": "inject",
+        "z": "520c4980.3dda68",
+        "name": "Atualizar Dashboard",
+        "topic": "",
+        "payload": "send_data_node",
+        "payloadType": "str",
+        "repeat": "11",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 240,
+        "y": 620,
+        "wires": [
+            [
+                "1efbbfe2.31d31"
+            ]
+        ]
+    },
+    {
+        "id": "27fc98b3.729c88",
+        "type": "mqtt in",
+        "z": "520c4980.3dda68",
+        "name": "recebeTemperaturaDoDispositivo",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "309444b8.8cdedc",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "6656282c.9508e8"
+            ]
+        ]
+    },
+    {
+        "id": "f605e163.70172",
+        "type": "mqtt in",
+        "z": "520c4980.3dda68",
+        "name": "recebeUmidadeDoDispositivo",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "309444b8.8cdedc",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "7d5db777.4d4768"
+            ]
+        ]
+    },
+    {
+        "id": "59382b12.293bd4",
+        "type": "mqtt out",
+        "z": "67f25d02.06ff34",
+        "name": "gravarDadosAquisitadosNoBroker",
+        "topic": "datatago",
+        "qos": "0",
+        "retain": "true",
+        "broker": "309444b8.8cdedc",
+        "x": 540,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ec0c9286.76126",
+        "type": "inject",
+        "z": "67f25d02.06ff34",
+        "name": "Gravar Dados na Plataforma",
+        "topic": "",
+        "payload": "send_data_tago",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "59382b12.293bd4"
+            ]
+        ]
+    },
+    {
+        "id": "6af9c9c0.2f5b48",
+        "type": "mqtt out",
+        "z": "67f25d02.06ff34",
+        "name": "tertarLedInterno",
+        "topic": "LEDPLACA",
+        "qos": "0",
+        "retain": "true",
+        "broker": "26e8caec.ac6336",
+        "x": 480,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "27da357e.f76aba",
+        "type": "mqtt out",
+        "z": "67f25d02.06ff34",
+        "name": "imprimirDadosNoDashboard",
+        "topic": "datanode",
+        "qos": "0",
+        "retain": "true",
+        "broker": "26e8caec.ac6336",
+        "x": 520,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "f8033a5b.f2eb38",
+        "type": "inject",
+        "z": "67f25d02.06ff34",
+        "name": "Atualizar Dashboard",
+        "topic": "",
+        "payload": "send_data_node",
+        "payloadType": "str",
+        "repeat": "11",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 580,
+        "wires": [
+            [
+                "27da357e.f76aba"
+            ]
+        ]
+    },
+    {
+        "id": "4916af2e.5689",
+        "type": "mqtt in",
+        "z": "67f25d02.06ff34",
+        "name": "recebeTemperaturaDoDispositivo",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "26e8caec.ac6336",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "595d276c.c9f168"
+            ]
+        ]
+    },
+    {
+        "id": "1c441b5b.876945",
+        "type": "mqtt in",
+        "z": "67f25d02.06ff34",
+        "name": "recebeUmidadeDoDispositivo",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "26e8caec.ac6336",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "53f0fe38.649f9"
+            ]
+        ]
+    },
+    {
+        "id": "9d0749cf.23c018",
+        "type": "mqtt out",
+        "z": "e55125f4.810118",
+        "name": "gravarDadosAquisitadosNoBroker",
+        "topic": "datatago",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a174e7c.25c4118",
+        "x": 560,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ad33633c.a0e4b",
+        "type": "inject",
+        "z": "e55125f4.810118",
+        "name": "Gravar Dados na Plataforma",
+        "topic": "",
+        "payload": "send_data_tago",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "9d0749cf.23c018"
+            ]
+        ]
+    },
+    {
+        "id": "c69c41ed.8a4a1",
+        "type": "mqtt out",
+        "z": "e55125f4.810118",
+        "name": "tertarLedInterno",
+        "topic": "LEDPLACA",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a174e7c.25c4118",
+        "x": 500,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "2bb4ceec.19e6c2",
+        "type": "mqtt out",
+        "z": "e55125f4.810118",
+        "name": "imprimirDadosNoDashboard",
+        "topic": "datanode",
+        "qos": "0",
+        "retain": "true",
+        "broker": "a174e7c.25c4118",
+        "x": 540,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "8c25327e.ab6c9",
+        "type": "inject",
+        "z": "e55125f4.810118",
+        "name": "Atualizar Dashboard",
+        "topic": "",
+        "payload": "send_data_node",
+        "payloadType": "str",
+        "repeat": "11",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 220,
+        "y": 620,
+        "wires": [
+            [
+                "2bb4ceec.19e6c2"
+            ]
+        ]
+    },
+    {
+        "id": "7f5193b2.0127fc",
+        "type": "mqtt in",
+        "z": "e55125f4.810118",
+        "name": "recebeTemperaturaDoDispositivo",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "a174e7c.25c4118",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "b6b16a13.984f78"
+            ]
+        ]
+    },
+    {
+        "id": "a85e04b6.ad5ba8",
+        "type": "mqtt in",
+        "z": "e55125f4.810118",
+        "name": "recebeUmidadeDoDispositivo",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "a174e7c.25c4118",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "4531699d.8563a8"
+            ]
+        ]
+    },
+    {
+        "id": "4f541963.8d3dc8",
+        "type": "comment",
+        "z": "6fe5a682.06fbe8",
+        "name": "broker-local",
+        "info": "Instancia o broker para n dispositivos, conforme portas MQTT e WS configuradas no sensor reponsável pela coleta e envio de dados.",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "18da1da4.9d2c52",
+        "type": "comment",
+        "z": "5882d3ef.c1d02c",
+        "name": "Descrição do flow",
+        "info": "para cada dispositivo, há um flow com as configurações de dashboard necessárias, bem como, subscrição e publicação de tópicos para o circuito responsável pela coleta e envio de dados. ",
+        "x": 220,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a4960d3a.0bc32",
+        "type": "comment",
+        "z": "47cb9669.aaba48",
+        "name": "armazenamento de dados",
+        "info": "flow subscreve tópicos dos dispositivos e armazena dados em arquivo localmente, onde o broker estiver sendo executado.",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ddc4b9c0.c43538",
+        "type": "comment",
+        "z": "b5491f04.a79a7",
+        "name": "Descrição do flow",
+        "info": "para cada dispositivo, há um flow com as configurações de dashboard necessárias, bem como, subscrição e publicação de tópicos para o circuito responsável pela coleta e envio de dados. ",
+        "x": 240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2f92590d.cfd086",
+        "type": "comment",
+        "z": "520c4980.3dda68",
+        "name": "Descrição do flow",
+        "info": "para cada dispositivo, há um flow com as configurações de dashboard necessárias, bem como, subscrição e publicação de tópicos para o circuito responsável pela coleta e envio de dados. ",
+        "x": 220,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "49dfd355.ff5f7c",
+        "type": "comment",
+        "z": "67f25d02.06ff34",
+        "name": "Descrição do flow",
+        "info": "para cada dispositivo, há um flow com as configurações de dashboard necessárias, bem como, subscrição e publicação de tópicos para o circuito responsável pela coleta e envio de dados. ",
+        "x": 180,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5a6dc5bf.5bf26c",
+        "type": "comment",
+        "z": "e55125f4.810118",
+        "name": "Descrição do flow",
+        "info": "para cada dispositivo, há um flow com as configurações de dashboard necessárias, bem como, subscrição e publicação de tópicos para o circuito responsável pela coleta e envio de dados. ",
+        "x": 240,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4efbef83.10995",
+        "type": "comment",
+        "z": "62c928af.0b8338",
+        "name": "informações de data e hora",
+        "info": "exibe informações de data e hora no dashboard em cada aba.",
+        "x": 210,
+        "y": 60,
+        "wires": []
     }
 ]

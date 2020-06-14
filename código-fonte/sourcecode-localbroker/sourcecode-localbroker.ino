@@ -6,13 +6,13 @@
  */
 #include <stdio.h>
 
-//#include <WiFi.h>         //ESP32
+//#include <WiFi.h>      //ESP32
 #include <ESP8266WiFi.h> //ESP8266
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <DHT.h>
-#include "Thread.h"
-#include "ThreadController.h"
+//#include "Thread.h"
+//#include "ThreadController.h"
 
 /* Definicoes gerais */
 //#define TEMPO_ENVIO_INFORMACOES    5000 //ms
@@ -20,9 +20,10 @@
 /* Definicoes do sensor de temperatura */
 #define DHTPIN  4   /* GPIO que o pino 2 do sensor é conectado */
 
-/* A biblioteca serve para os sensores DHT11, DHT22 e DHT21.
-   No nosso caso, usaremos o DHT22, porém se você desejar utilizar
-   algum dos outros disponíveis, basta descomentar a linha correspondente.
+/* 
+   A biblioteca serve para os sensores DHT11, DHT22 e DHT21.
+   No nosso caso, usaremos o DHT22,para utilizar outros disponíveis, 
+   basta descomentar a linha correspondente.
 */
 //#define DHTTYPE DHT11   // DHT 11
 #define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
@@ -32,32 +33,29 @@
 #define DEBUG_UART_BAUDRATE               9600
 
 /* MQTT definitions - tópico padrão para publicação no broker da TAGO.IO*/
-//#define MQTT_PUB_TOPIC "tago/data/post"
+
 //#define MQTT_PUB_UMID "tagodata/umidade" //topico para umidade
 //#define MQTT_PUB_TEMP "tagodata/temperatura" //topico para temperatura
 
-#define MQTT_PUB_STORE "tagodata/store" //topico para temperatura
+#define MQTT_PUB_STORE "tagodata/store" //topico de transmissão de dados para broker local
 
 /*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
-#define MQTT_USERNAME  ""  /* nome do dispositivo cadastrado */
-#define MQTT_PASSWORD  ""
+#define MQTT_USERNAME  ""  // nome do dispositivo cadastrado 
+#define MQTT_PASSWORD  ""  // se houver senha cadastrada no broker
 
 /* WIFI */
-const char* ssid_wifi = "";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
-const char* password_wifi = ""; /*  SENHA DA REDE WIFI */
-
-/*descomentar caso seja esp32*/
-//char* ssid_wifi = "";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
-//char* password_wifi = ""; /*  SENHA DA REDE WIFI */
+const char *ssid_wifi = "";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
+const char *password_wifi = ""; /*  SENHA DA REDE WIFI */
 
 WiFiClient espClient;     
 
 /* MQTT */
 //const char* broker_mqtt = "mqtt.tago.io"; /* MQTT broker URL */
-const char* broker_mqtt = "192.168.0.9"; //inserir endereço do broker
-int broker_port = 1884;  // inserir a porta cadastrada no broker
-PubSubClient MQTT(espClient); 
 
+const char* broker_mqtt = "192.168.0.9"; //inserir endereço do broker local
+int broker_port = 1883;  // inserir a porta cadastrada no broker
+
+PubSubClient MQTT(espClient); 
 
 bool ledteste = false; // VARIAVEL GLOBAL PARA TESTE DO LED INTERNO DA PLACA
  
@@ -78,8 +76,7 @@ void callback(String topic, byte* payload, unsigned int length);
 
 
 /* Funcao: inicializa conexao wi-fi
- * Parametros: nenhum
- * Retorno: nenhum 
+
  */
 void init_wifi(void) 
 {
@@ -92,8 +89,7 @@ void init_wifi(void)
 }
 
 /* Funcao: conexao a uma rede wi-fi
- * Parametros: nenhum
- * Retorno: nenhum 
+
  */
 void connect_wifi(void) 
   {
@@ -106,6 +102,7 @@ void connect_wifi(void)
     {
         //delay(100);
         //Serial.print(".");
+        // rotina para led interno indicar falha de conexao com rede wifi
         digitalWrite(LED_BUILTIN, LOW);
         delay(100);
         digitalWrite(LED_BUILTIN, HIGH);
@@ -148,17 +145,18 @@ void connect_MQTT(void)
         
         if (MQTT.connect(mqtt_id_randomico, MQTT_USERNAME, MQTT_PASSWORD)) 
         {
+            //subscreve o dispositivo aos topicos para recepção de dados
             Serial.println("Conectado ao broker MQTT com sucesso!");
-            MQTT.subscribe("LEDPLACA");
-            MQTT.subscribe("datatago");
-            MQTT.subscribe("datanode");
+            MQTT.subscribe("LEDPLACA"); // topico de estado do led
+            MQTT.subscribe("datatago"); // topico que grava os dados em arquivo local do broker
+            MQTT.subscribe("datanode"); // topico para envio de dados para o dashboard 
         } 
         else 
         {
             //Serial.println("Falha na tentativa de conexao com broker MQTT.");
             //Serial.println("Nova tentativa em 2s...");
-            //delay(2000);
-           digitalWrite(LED_BUILTIN, LOW);
+            // rotina do led interno para indicar falta de conexao com o broker
+            digitalWrite(LED_BUILTIN, LOW);
             delay(1000);
             digitalWrite(LED_BUILTIN, HIGH);
             delay(1000);
@@ -203,7 +201,7 @@ void verify_mqtt_connection(void)
         }
       }  
 
-  else if(topic=="datatago") //recebe o topico que aciona a funcao de envio de valores para o broker
+  else if(topic=="datatago") //recebe o topico que aciona a funcao de envio de valores para o broker e sejam armazenados
       {
   
       if(messageTemp == "send_data_tago" )
@@ -225,7 +223,7 @@ void verify_mqtt_connection(void)
        
   }
 
-
+// função para envio de dados ao broker e armazenamento
 void send_data_tago(void) 
   {
    StaticJsonDocument<250> tago_json_temperature;
@@ -258,7 +256,7 @@ void send_data_tago(void)
    
   }
   
-/* Funcao: envia os valores para o dashboard da ibmcloud desenvolvido em node-red*/
+/* Funcao: envia os valores para o dashboard node-red*/
 void send_data_nodered(void)
   {
    float temperatura_lida = dht.readTemperature();
@@ -278,7 +276,7 @@ void setup()
   {
     /* UARTs setup */  
     Serial.begin(DEBUG_UART_BAUDRATE);
-    pinMode(BUILTIN_LED, OUTPUT);
+    pinMode(BUILTIN_LED, OUTPUT); //setup do led interno para indicar os niveis de conexao
     
     digitalWrite(LED_BUILTIN, HIGH); 
     
@@ -309,8 +307,8 @@ void loop()
   {
     /* Verifica e garante conectividades wi-fi e MQTT */
     
-    verify_wifi_connection();
-    verify_mqtt_connection();
+    verify_wifi_connection(); // checa o status da conexão wifi
+    verify_mqtt_connection(); // checa o status da conexão com o broker
    
    //cpu.run(); // começa a rodar as threads declaradas
      
