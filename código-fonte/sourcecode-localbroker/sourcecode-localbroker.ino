@@ -5,7 +5,6 @@
  * 
  */
 #include <stdio.h>
-
 //#include <WiFi.h>      //ESP32
 #include <ESP8266WiFi.h> //ESP8266
 #include <PubSubClient.h>
@@ -21,9 +20,9 @@
 #define DHTPIN  4   /* GPIO que o pino 2 do sensor é conectado */
 
 /* 
-   A biblioteca serve para os sensores DHT11, DHT22 e DHT21.
-   No nosso caso, usaremos o DHT22,para utilizar outros disponíveis, 
-   basta descomentar a linha correspondente.
+ * A biblioteca serve para os sensores DHT11, DHT22 e DHT21.
+ * No nosso caso, usaremos o DHT22,para utilizar outros disponíveis, 
+ * basta descomentar a linha correspondente.
 */
 //#define DHTTYPE DHT11   // DHT 11
 #define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
@@ -33,10 +32,10 @@
 #define DEBUG_UART_BAUDRATE               9600
 
 /* MQTT definitions - tópico padrão para publicação no broker da TAGO.IO*/
-
 //#define MQTT_PUB_UMID "tagodata/umidade" //topico para umidade
 //#define MQTT_PUB_TEMP "tagodata/temperatura" //topico para temperatura
 
+/*tópico para publicação no node-red em broker local */
 #define MQTT_PUB_STORE "tagodata/store" //topico de transmissão de dados para broker local
 
 /*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
@@ -47,20 +46,33 @@
 const char *ssid_wifi = "";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
 const char *password_wifi = ""; /*  SENHA DA REDE WIFI */
 
+/*Configuração para IP fixo caso necessario*/
+//IPAddress ip(192,168,0,175); //COLOQUE UMA FAIXA DE IP DISPONÍVEL DO SEU ROTEADOR. EX: 192.168.1.110 **** ISSO VARIA, NO MEU CASO É: 192.168.0.175
+//IPAddress gateway(192,168,0,1); //GATEWAY DE CONEXÃO (ALTERE PARA O GATEWAY DO SEU ROTEADOR)
+//IPAddress subnet(255,255,255,0);
+
 WiFiClient espClient;     
 
 /* MQTT */
-//const char* broker_mqtt = "mqtt.tago.io"; /* MQTT broker URL */
+/* MQTT broker URL */
+//const char* broker_mqtt = "mqtt.tago.io"; 
 
+/* endereço do broker MQTT local e respectiva porta para o dispositivo */
 const char* broker_mqtt = "192.168.0.9"; //inserir endereço do broker local
 int broker_port = 1883;  // inserir a porta cadastrada no broker
 
 PubSubClient MQTT(espClient); 
 
-bool ledteste = false; // VARIAVEL GLOBAL PARA TESTE DO LED INTERNO DA PLACA
+/*VARIAVEL GLOBAL PARA TESTE DO LED INTERNO DA PLACA*/
+bool ledteste = false;
  
 /* objeto para comunicação com sensor DHT22  */
 DHT dht(DHTPIN, DHTTYPE);
+
+/*objetos para utilizacao de threads, caso necessario*/
+//ThreadController cpu;
+//Thread threadFuncaoTago; //thread de envio de dados para tago.io
+//Thread threadFuncaoDashboard; //thread de envio de dados para dashboard ibmcloud
 
 /* PROTÓTIPOS DAS FUNCOES UTILIZADAS*/
 void init_wifi(void);
@@ -75,9 +87,7 @@ void send_data_nodered(void);
 void callback(String topic, byte* payload, unsigned int length);
 
 
-/* Funcao: inicializa conexao wi-fi
-
- */
+/* Funcao: inicializa conexao wi-fi */
 void init_wifi(void) 
 {
     delay(10);
@@ -88,32 +98,36 @@ void init_wifi(void)
     connect_wifi();
 }
 
-/* Funcao: conexao a uma rede wi-fi
-
- */
+/* Funcao: conexao a uma rede wi-fi */
 void connect_wifi(void) 
   {
     if (WiFi.status() == WL_CONNECTED)
         return;
         
+    WiFi.disconnect();
     WiFi.begin(ssid_wifi, password_wifi);
+    //WiFi.config(ip, gateway, subnet); //configuração para IP fixo
     
     while (WiFi.status() != WL_CONNECTED) 
-    {
-        //delay(100);
-        //Serial.print(".");
-        // rotina para led interno indicar falha de conexao com rede wifi
-        digitalWrite(LED_BUILTIN, LOW);
-        delay(100);
-        digitalWrite(LED_BUILTIN, HIGH);
-        delay(400);
-    }
+      {
+          //delay(100);
+          //Serial.print(".");
+          // rotina para led interno indicar falha de conexao com rede wifi
+          digitalWrite(LED_BUILTIN, LOW);
+          delay(100);
+          digitalWrite(LED_BUILTIN, HIGH);
+          delay(400);
+      }
   
-    Serial.println();
-    Serial.print("Conectado com sucesso a rede wi-fi: ");
-    Serial.println(ssid_wifi);
-    Serial.print("IP: ");
-    Serial.println(WiFi.localIP());
+      Serial.println();
+      Serial.print("Conectado a rede wi-fi: ");
+      //Serial.println(ssid_wifi);
+      Serial.println(WiFi.SSID());
+      Serial.print("IP: ");
+      Serial.println(WiFi.localIP());
+      Serial.println(WiFi.gatewayIP());
+      Serial.println(WiFi.subnetMask());
+      Serial.println(WiFi.macAddress());
   }
 
 /* Funcao: verifica e garante conexao wi-fi*/
@@ -172,58 +186,56 @@ void verify_mqtt_connection(void)
   }
 
 /* Funcao: checa os tópicos enviados para o esp8266 para interação com o broker */
- void callback(String topic, byte* payload, unsigned int length) {
+ void callback(String topic, byte* payload, unsigned int length) 
+  {
 
-  String messageTemp; 
-  
-  for (int i = 0; i < length; i++) {     
-     
-    messageTemp += (char)payload[i];
-  }  
+    String messageTemp; 
+    
+    for (int i = 0; i < length; i++) 
+      {       
+        messageTemp += (char)payload[i];
+      }  
   
     //Serial.print(messageTemp);
     //Serial.println();
     //Serial.print(topic);
     //Serial.println();
 
-  if(topic=="LEDPLACA") //topico que checa se o botao de teste do dashboard do led interno foi pressionado
-      {
-  
-      if(messageTemp == "ligar" )
-        {
-          ledteste=!ledteste;
-        digitalWrite(LED_BUILTIN, ledteste);
-        }
-        
-      else if(messageTemp == "desligar")
-        {      
-        //digitalWrite(LED_BUILTIN, HIGH);
-        }
-      }  
-
-  else if(topic=="datatago") //recebe o topico que aciona a funcao de envio de valores para o broker e sejam armazenados
-      {
-  
-      if(messageTemp == "send_data_tago" )
-        {
-          send_data_tago();
-          
-        }     
-      }
-
-  else if(topic=="datanode") //recebe o topico que aciona a funcao de envio de valores para o dashboard
-      {
-  
-      if(messageTemp == "send_data_node" )
-        {
-          send_data_nodered();
+  /*topico que checa se o botao de teste do dashboard do led interno foi pressionado*/
+    if(topic=="LEDPLACA") 
+        {  
+          if(messageTemp == "ligar" )
+            {
+              ledteste=!ledteste;
+              digitalWrite(LED_BUILTIN, ledteste);
+            }
             
-        }     
-      }
-       
+          else if(messageTemp == "desligar")
+            {      
+              //digitalWrite(LED_BUILTIN, HIGH);
+            }
+        }  
+  
+    /*recebe o topico que aciona a funcao de envio de valores para o broker para que sejam armazenados*/
+    else if(topic=="datatago") 
+        {  
+          if(messageTemp == "send_data_tago" )
+            {
+              send_data_tago();
+            }     
+        }
+  
+    /*recebe o topico que aciona a funcao de envio de valores para o dashboard*/
+    else if(topic=="datanode") 
+        {  
+          if(messageTemp == "send_data_node" )
+            {
+              send_data_nodered();            
+            }     
+        }       
   }
 
-// função para envio de dados ao broker e armazenamento
+/*função para envio de dados ao broker e armazenamento*/
 void send_data_tago(void) 
   {
    StaticJsonDocument<250> tago_json_temperature;
@@ -235,7 +247,7 @@ void send_data_tago(void)
    int i;
 
    /* Imprime medicoes de temperatura e umidade (para debug) */
-   for (i=0; i<20; i++)
+   for (i=0; i<10; i++)
        Serial.println(" ");
        
    Serial.println("----------");
@@ -246,7 +258,7 @@ void send_data_tago(void)
    Serial.print(umidade_lida);
    Serial.println("%");
    
-   tago_json_store["device"] = MQTT_USERNAME; //MQTT_USERNAME
+   tago_json_store["device"] = MQTT_USERNAME; 
    tago_json_store["value_temperature"] = temperatura_lida;
    tago_json_store["value_humidity"] = umidade_lida;
      
@@ -266,17 +278,10 @@ void send_data_nodered(void)
    MQTT.publish("device/umidade", String(umidade_lida).c_str(), true);
   }
 
-
-//ThreadController cpu;
-//Thread threadFuncaoTago; //thread de envio de dados para tago.io
-//Thread threadFuncaoDashboard; //thread de envio de dados para dashboard ibmcloud
-
-
 void setup() 
-  {
-    /* UARTs setup */  
+  {     
     Serial.begin(DEBUG_UART_BAUDRATE);
-    pinMode(BUILTIN_LED, OUTPUT); //setup do led interno para indicar os niveis de conexao
+    pinMode(BUILTIN_LED, OUTPUT); 
     
     digitalWrite(LED_BUILTIN, HIGH); 
     
@@ -291,14 +296,15 @@ void setup()
     
     connect_MQTT();
     
-    //thread para fução de envio ao broker tagoIO
+    /*thread para fução de envio ao broker tagoIO*/
     //threadFuncaoTago.setInterval(600000);
     //threadFuncaoTago.onRun(send_data_tago);
 
-    //thread para envio de informações ao dashboard em node-red
+    /*thread para envio de informações ao dashboard em node-red*/
     //threadFuncaoDashboard.setInterval(5000);
     //threadFuncaoDashboard.onRun(send_data_nodered);
 
+    /*Adiciona cada funcao das threads ao objeto cpu para que sejam executadas de acordo com o intervalo estabelecido*/
     //cpu.add(&threadFuncaoTago);
     //cpu.add(&threadFuncaoDashboard);
   }
@@ -306,13 +312,14 @@ void setup()
 void loop() 
   {
     /* Verifica e garante conectividades wi-fi e MQTT */
-    
     verify_wifi_connection(); // checa o status da conexão wifi
     verify_mqtt_connection(); // checa o status da conexão com o broker
-   
-   //cpu.run(); // começa a rodar as threads declaradas
-     
-    MQTT.loop(); //checa se alguma mensagem chegou via publish
+
+    /*começa a rodar as threads declaradas*/
+    //cpu.run();
+
+    /*checa se alguma mensagem chegou via publish*/ 
+    MQTT.loop();
     
     /* Faz o envio da temperatura e umidade para a plataforma IoT (Tago.io) */   
     //send_data_tago();  
