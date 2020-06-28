@@ -1,0 +1,1271 @@
+[
+    {
+        "id": "44c24de1.9fcc04",
+        "type": "tab",
+        "label": "alerta",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8acced1e.8b62b",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "7b1df743.57f988",
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "abeca8e5.465b48"
+            ]
+        ]
+    },
+    {
+        "id": "4334b08.fe85b5",
+        "type": "inject",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "",
+        "payload": "33",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "24cffa14.c51726"
+            ]
+        ]
+    },
+    {
+        "id": "24cffa14.c51726",
+        "type": "mqtt out",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/umidade",
+        "qos": "0",
+        "retain": "true",
+        "broker": "bebbd5a9.bc3bb8",
+        "x": 340,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "abeca8e5.465b48",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "75",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "40",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "e44d9442.6372f8"
+            ],
+            [
+                "b712380.d32e8c8"
+            ]
+        ]
+    },
+    {
+        "id": "bf48a42e.3a9d38",
+        "type": "change",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ATENÇÃO! UMIDADE ACIMA DO ESPECIFICADO",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.dispositivo",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [
+                "52c4bdaa.678d54",
+                "aeb1355a.2dba78"
+            ]
+        ]
+    },
+    {
+        "id": "52c4bdaa.678d54",
+        "type": "debug",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 830,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "96ea7790.93dd78",
+        "type": "change",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ATENÇÃO! UMIDADE ABAIXO DO ESPECIFICADO!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.dispositivo",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "52c4bdaa.678d54",
+                "aeb1355a.2dba78"
+            ]
+        ]
+    },
+    {
+        "id": "aa00dba5.ac03b8",
+        "type": "inject",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "",
+        "payload": "78",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "24cffa14.c51726"
+            ]
+        ]
+    },
+    {
+        "id": "aeb1355a.2dba78",
+        "type": "ui_toast",
+        "z": "44c24de1.9fcc04",
+        "position": "top right",
+        "displayTime": "10",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 840,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5abf938a.b7489c",
+        "type": "inject",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "",
+        "payload": "56",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "24cffa14.c51726"
+            ]
+        ]
+    },
+    {
+        "id": "e44d9442.6372f8",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "payload=\n{\n\"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-001\"\n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "bf48a42e.3a9d38"
+            ]
+        ]
+    },
+    {
+        "id": "b712380.d32e8c8",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-001\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "96ea7790.93dd78"
+            ]
+        ]
+    },
+    {
+        "id": "4ef928d1.0e5858",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "cf6f6497.d69c08",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "978f6130.02f88"
+            ]
+        ]
+    },
+    {
+        "id": "738b2384.960bec",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "ffa1d428.72d228",
+        "x": 100,
+        "y": 480,
+        "wires": [
+            [
+                "b31592e7.89cbf"
+            ]
+        ]
+    },
+    {
+        "id": "6e42eea6.f3b3b",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "d77fdcc6.42aa5",
+        "x": 100,
+        "y": 520,
+        "wires": [
+            [
+                "464931fc.89c0f"
+            ]
+        ]
+    },
+    {
+        "id": "d7e15994.795338",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/umidade",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "bebbd5a9.bc3bb8",
+        "x": 100,
+        "y": 560,
+        "wires": [
+            [
+                "64c9427c.63672c"
+            ]
+        ]
+    },
+    {
+        "id": "b31592e7.89cbf",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "75",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "40",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "96cfbac0.ce61c8"
+            ],
+            [
+                "4ed9587c.222de8"
+            ]
+        ]
+    },
+    {
+        "id": "96cfbac0.ce61c8",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-003\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "bf48a42e.3a9d38"
+            ]
+        ]
+    },
+    {
+        "id": "4ed9587c.222de8",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-003\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "96ea7790.93dd78"
+            ]
+        ]
+    },
+    {
+        "id": "978f6130.02f88",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "75",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "40",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "71feb5a7.d4191c"
+            ],
+            [
+                "cd02d030.3e1bf"
+            ]
+        ]
+    },
+    {
+        "id": "71feb5a7.d4191c",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-002\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "bf48a42e.3a9d38"
+            ]
+        ]
+    },
+    {
+        "id": "cd02d030.3e1bf",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-002\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "96ea7790.93dd78"
+            ]
+        ]
+    },
+    {
+        "id": "464931fc.89c0f",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "75",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "40",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 560,
+        "wires": [
+            [
+                "e309af00.e70f9"
+            ],
+            [
+                "ba24d9fa.181af8"
+            ]
+        ]
+    },
+    {
+        "id": "e309af00.e70f9",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-004\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 540,
+        "wires": [
+            [
+                "bf48a42e.3a9d38"
+            ]
+        ]
+    },
+    {
+        "id": "ba24d9fa.181af8",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-004\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 580,
+        "wires": [
+            [
+                "96ea7790.93dd78"
+            ]
+        ]
+    },
+    {
+        "id": "64c9427c.63672c",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "75",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "40",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "ff0a7d48.af8af"
+            ],
+            [
+                "d7e6355b.46b888"
+            ]
+        ]
+    },
+    {
+        "id": "ff0a7d48.af8af",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-005\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 620,
+        "wires": [
+            [
+                "bf48a42e.3a9d38"
+            ]
+        ]
+    },
+    {
+        "id": "d7e6355b.46b888",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-005\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "96ea7790.93dd78"
+            ]
+        ]
+    },
+    {
+        "id": "46ab275d.950c08",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "7b1df743.57f988",
+        "x": 110,
+        "y": 840,
+        "wires": [
+            [
+                "968d1076.23af6"
+            ]
+        ]
+    },
+    {
+        "id": "968d1076.23af6",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "28",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 760,
+        "wires": [
+            [
+                "8a1554e8.476eb8"
+            ],
+            [
+                "cce50c6f.e09c5"
+            ]
+        ]
+    },
+    {
+        "id": "74de7f4a.7b622",
+        "type": "change",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ATENÇÃO! TEMPERATURA ACIMA DO ESPECIFICADO",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.dispositivo",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 820,
+        "wires": [
+            [
+                "3b532db2.c51442",
+                "7126e585.ec15cc"
+            ]
+        ]
+    },
+    {
+        "id": "3b532db2.c51442",
+        "type": "debug",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 850,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "88db0f8f.241a6",
+        "type": "change",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ATENÇÃO! TEMPERATURA ABAIXO DO ESPECIFICADO!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.dispositivo",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1020,
+        "wires": [
+            [
+                "3b532db2.c51442",
+                "7126e585.ec15cc"
+            ]
+        ]
+    },
+    {
+        "id": "7126e585.ec15cc",
+        "type": "ui_toast",
+        "z": "44c24de1.9fcc04",
+        "position": "top left",
+        "displayTime": "10",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "",
+        "x": 840,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "8a1554e8.476eb8",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "payload=\n{\n\"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-001\"\n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 740,
+        "wires": [
+            [
+                "74de7f4a.7b622"
+            ]
+        ]
+    },
+    {
+        "id": "cce50c6f.e09c5",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-001\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 780,
+        "wires": [
+            [
+                "88db0f8f.241a6"
+            ]
+        ]
+    },
+    {
+        "id": "52d26828.f15568",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "cf6f6497.d69c08",
+        "x": 110,
+        "y": 880,
+        "wires": [
+            [
+                "4cba542b.4c4acc"
+            ]
+        ]
+    },
+    {
+        "id": "f7b6723.891d69",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "ffa1d428.72d228",
+        "x": 110,
+        "y": 920,
+        "wires": [
+            [
+                "9a774389.feb86"
+            ]
+        ]
+    },
+    {
+        "id": "e07ef53f.602418",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-003\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 900,
+        "wires": [
+            [
+                "74de7f4a.7b622"
+            ]
+        ]
+    },
+    {
+        "id": "6adea980.5da268",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-003\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 940,
+        "wires": [
+            [
+                "88db0f8f.241a6"
+            ]
+        ]
+    },
+    {
+        "id": "6d894f87.c146",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-002\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 820,
+        "wires": [
+            [
+                "74de7f4a.7b622"
+            ]
+        ]
+    },
+    {
+        "id": "9d34ca29.80e448",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-002\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 860,
+        "wires": [
+            [
+                "88db0f8f.241a6"
+            ]
+        ]
+    },
+    {
+        "id": "e7de2c28.39a8b",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-004\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 980,
+        "wires": [
+            [
+                "74de7f4a.7b622"
+            ]
+        ]
+    },
+    {
+        "id": "aa9e3f66.1be92",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-004\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 1020,
+        "wires": [
+            [
+                "88db0f8f.241a6"
+            ]
+        ]
+    },
+    {
+        "id": "ccb1b9c5.369b68",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-005\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;\n\n/*{\"topic\":\"tagodata/store\",\n\"payload\":\n{\n\"device\":\"LMM-TU-004\",\n\"value_temperature\":23.4,\n\"value_humidity\":72.3\n    \n},\n\"qos\":0,\"retain\":false,\n\"_topic\":\"tagodata/store\",\n\"_msgid\":\"6437a9be.461528\"}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 1060,
+        "wires": [
+            [
+                "74de7f4a.7b622"
+            ]
+        ]
+    },
+    {
+        "id": "977cb189.79b04",
+        "type": "function",
+        "z": "44c24de1.9fcc04",
+        "name": "formatPayload",
+        "func": "\n\npayload={\n    \"topic\":msg.topic,\n\"valor\":msg.payload,\n\"dispositivo\":\"Dispositivo LMM-TU-005\"\n    \n};\n\nmsg.payload=payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 1100,
+        "wires": [
+            [
+                "88db0f8f.241a6"
+            ]
+        ]
+    },
+    {
+        "id": "dfc0216.1262fe",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "d77fdcc6.42aa5",
+        "x": 110,
+        "y": 960,
+        "wires": [
+            [
+                "5a6bf919.f29ff8"
+            ]
+        ]
+    },
+    {
+        "id": "cedf0fa8.2659c",
+        "type": "mqtt in",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "bebbd5a9.bc3bb8",
+        "x": 110,
+        "y": 1000,
+        "wires": [
+            [
+                "513d58b.190a2a8"
+            ]
+        ]
+    },
+    {
+        "id": "4cba542b.4c4acc",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "28",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "6d894f87.c146"
+            ],
+            [
+                "9d34ca29.80e448"
+            ]
+        ]
+    },
+    {
+        "id": "9a774389.feb86",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "28",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 920,
+        "wires": [
+            [
+                "e07ef53f.602418"
+            ],
+            [
+                "6adea980.5da268"
+            ]
+        ]
+    },
+    {
+        "id": "5a6bf919.f29ff8",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "28",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 1000,
+        "wires": [
+            [
+                "e7de2c28.39a8b"
+            ],
+            [
+                "aa9e3f66.1be92"
+            ]
+        ]
+    },
+    {
+        "id": "513d58b.190a2a8",
+        "type": "switch",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "28",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 1080,
+        "wires": [
+            [
+                "ccb1b9c5.369b68"
+            ],
+            [
+                "977cb189.79b04"
+            ]
+        ]
+    },
+    {
+        "id": "dce177b8.785dc8",
+        "type": "inject",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "",
+        "payload": "15",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "5039055c.29662c"
+            ]
+        ]
+    },
+    {
+        "id": "71ffa0fb.7dd25",
+        "type": "inject",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "",
+        "payload": "30",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "5039055c.29662c"
+            ]
+        ]
+    },
+    {
+        "id": "5039055c.29662c",
+        "type": "mqtt out",
+        "z": "44c24de1.9fcc04",
+        "name": "",
+        "topic": "device/temperatura",
+        "qos": "0",
+        "retain": "true",
+        "broker": "bebbd5a9.bc3bb8",
+        "x": 390,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7b1df743.57f988",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "BROKER001",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "bebbd5a9.bc3bb8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "BROKER005",
+        "broker": "127.0.0.1",
+        "port": "1887",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "cf6f6497.d69c08",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "BROKER002",
+        "broker": "127.0.0.1",
+        "port": "1885",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "ffa1d428.72d228",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "BROKER003",
+        "broker": "127.0.0.1",
+        "port": "1884",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "d77fdcc6.42aa5",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "BROKER004",
+        "broker": "127.0.0.1",
+        "port": "1886",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
