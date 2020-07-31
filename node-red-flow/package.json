@@ -18,7 +18,10 @@
         "node-red-node-watson": "0.9.2",
         "node-red-nodes-cf-sqldb-dashdb": "0.x",
 	"node-red-contrib-mqtt-broker": "0.2.5", // MOSCA broker para node-red
-	"node-red-node-serialport": "0.10.1" // testes para porta serial
+	"node-red-node-serialport": "0.10.1", // testes para porta serial
+	"node-red-node-ui-table": "0.3.4", //dashboard table
+	"node-red-contrib-ui-artless-gauge":"0.1.48", //dashboard new gauge test
+	"node-red-node-random":"0.2.0", // gerador de numeros aleatorios
     },
     "scripts": {
         "start": "node --max-old-space-size=160 index.js --settings ./bluemix-settings.js -v"
