@@ -681,7 +681,7 @@
   "node-red-contrib-ui-led": {
    "name": "node-red-contrib-ui-led",
    "version": "0.3.3",
-   "local": false,
+   "local": true,
    "nodes": {
     "ui_led": {
      "name": "ui_led",
@@ -698,7 +698,7 @@
   "node-red-contrib-simple-message-queue": {
    "name": "node-red-contrib-simple-message-queue",
    "version": "0.2.6",
-   "local": false,
+   "local": true,
    "nodes": {
     "simple-queue": {
      "name": "simple-queue",
