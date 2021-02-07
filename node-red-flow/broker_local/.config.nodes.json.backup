@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "1.0.4",
+        "version": "1.2.9",
         "local": false,
         "nodes": {
             "inject": {
@@ -360,7 +360,7 @@
     },
     "node-red-node-rbe": {
         "name": "node-red-node-rbe",
-        "version": "0.2.8",
+        "version": "0.2.9",
         "local": false,
         "nodes": {
             "rbe": {
@@ -908,6 +908,40 @@
                 "local": true,
                 "module": "node-red-contrib-ui-time-scheduler",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-ui-time-scheduler\\time-scheduler.js"
+            }
+        }
+    },
+    "node-red-contrib-ui-artless-gauge": {
+        "name": "node-red-contrib-ui-artless-gauge",
+        "version": "0.3.6",
+        "local": false,
+        "nodes": {
+            "ui-value-trail": {
+                "name": "ui-value-trail",
+                "types": [
+                    "ui_artlessgauge"
+                ],
+                "enabled": true,
+                "local": true,
+                "module": "node-red-contrib-ui-artless-gauge",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-ui-artless-gauge\\ui-artless-gauge.js"
+            }
+        }
+    },
+    "node-red-contrib-automation-controller": {
+        "name": "node-red-contrib-automation-controller",
+        "version": "1.1.4",
+        "local": false,
+        "nodes": {
+            "automationController": {
+                "name": "automationController",
+                "types": [
+                    "automation controller"
+                ],
+                "enabled": true,
+                "local": true,
+                "module": "node-red-contrib-automation-controller",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-automation-controller\\automationController.js"
             }
         }
     }

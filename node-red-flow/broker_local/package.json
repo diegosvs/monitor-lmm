@@ -4,9 +4,11 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "node-red-contrib-automation-controller": "~1.1.4",
         "node-red-contrib-browser-utils": "0.0.9",
         "node-red-contrib-mqtt-broker": "~0.2.5",
         "node-red-contrib-simple-message-queue": "~0.2.6",
+        "node-red-contrib-ui-artless-gauge": "~0.3.6",
         "node-red-contrib-ui-led": "~0.3.3",
         "node-red-contrib-ui-time-scheduler": "~1.6.1",
         "node-red-dashboard": "~2.27.0",
