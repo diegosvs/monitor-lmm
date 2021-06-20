@@ -8,3 +8,4 @@ https://github.com/plapointe6/EspMQTTClient - espmqttclient by patrick lapointe
 https://pubsubclient.knolleary.net/ - pubsubclient by nick O'Leary 
 https://github.com/adafruit/Adafruit_BME280_Library - Adafruit BME280 Library, by adafruit 
 http://arduino.esp8266.com/stable/package_esp8266com_index.json --> COLAR NA ABA DE PREFERÊNCIAS PARA INSTALAR PLACA ESP8266
+https://dl.espressif.com/dl/package_esp32_index.json --> COLAR NA ABA DE PREFERÊNCIAS PARA INSTALAR PLACA ESP32
