@@ -10,8 +10,9 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <DHT.h>
-//#include "Thread.h"
-//#include "ThreadController.h"
+#include "FirebaseESP8266.h"
+
+
 
 /* Definicoes gerais */
 //#define TEMPO_ENVIO_INFORMACOES    5000 //ms
@@ -24,34 +25,51 @@
  * No nosso caso, usaremos o DHT22,para utilizar outros disponíveis, 
  * basta descomentar a linha correspondente.
 */
-#define DHTTYPE DHT11   // DHT 11
-//#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
+//#define DHTTYPE DHT11   // DHT 11
+#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 
 /* Definicoes da UART de debug para NodeMCU v2, setar bauderate para 9600 */
 #define DEBUG_UART_BAUDRATE               9600
 
-/* MQTT definitions - tópico padrão para publicação no broker da TAGO.IO*/
-//#define MQTT_PUB_UMID "tagodata/umidade" //topico para umidade
-//#define MQTT_PUB_TEMP "tagodata/temperatura" //topico para temperatura
+/*
+https://github.com/mobizt/Firebase-ESP8266
+https://github.com/mobizt/Firebase-ESP-Client
+https://github.com/mobizt/FirebaseJson
+#define FIREBASE_HOST ""
+#define FIREBASE_AUTH ""
+
+FirebaseData firebaseData;
+
+Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+Firebse.reconnectWiFi(true);
+
+Firebase.getString(firebaseData, [topico]);
+Firebase.setString(firebaseData, [topico], [variavel]);
+*/
 
 /*tópico para publicação no node-red em broker local */
 #define MQTT_PUB_STORE "tagodata/store" //topico de transmissão de dados para broker local
 
 /*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
-#define MQTT_USERNAME  "LMM-TU-001"  // nome do dispositivo cadastrado 
+#define MQTT_USERNAME  "LMM-TU-002"  // nome do dispositivo cadastrado 
 #define MQTT_PASSWORD  ""  // se houver senha cadastrada no broker
+
+#define FIREBASE_HOST ""
+#define FIREBASE_AUTH ""
 
 /* WIFI */
 const char *ssid_wifi = "IPT-WiFi-Novo";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
-const char *password_wifi = "const@nte"; /*  SENHA DA REDE WIFI */
+const char *password_wifi = "m@gnesium"; /*  SENHA DA REDE WIFI */
 
 /*Configuração para IP fixo caso necessario*/
 //IPAddress ip(192,168,0,175); //COLOQUE UMA FAIXA DE IP DISPONÍVEL DO SEU ROTEADOR. EX: 192.168.1.110 **** ISSO VARIA, NO MEU CASO É: 192.168.0.175
 //IPAddress gateway(192,168,0,1); //GATEWAY DE CONEXÃO (ALTERE PARA O GATEWAY DO SEU ROTEADOR)
 //IPAddress subnet(255,255,255,0);
 
-WiFiClient espClient;     
+WiFiClient espClient; 
+FirebaseData firebaseData;
+
 
 /* MQTT */
 /* MQTT broker URL */
@@ -141,6 +159,7 @@ void init_MQTT(void)
 {
     MQTT.setServer(broker_mqtt, broker_port);
     MQTT.setCallback(callback);
+    Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
 }
 
 /* Funcao: conecta com broker MQTT (se nao ha conexao ativa)*/
