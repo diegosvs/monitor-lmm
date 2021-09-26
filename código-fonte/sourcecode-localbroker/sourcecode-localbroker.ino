@@ -24,8 +24,8 @@
  * No nosso caso, usaremos o DHT22,para utilizar outros disponíveis, 
  * basta descomentar a linha correspondente.
 */
-#define DHTTYPE DHT11   // DHT 11
-//#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
+//#define DHTTYPE DHT11   // DHT 11
+#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 
 /* Definicoes da UART de debug para NodeMCU v2, setar bauderate para 9600 */
@@ -39,12 +39,14 @@
 #define MQTT_PUB_STORE "tagodata/store" //topico de transmissão de dados para broker local
 
 /*DEFINICOES DO DISPOSITIVO CADASTRADO NO BROKER*/
-#define MQTT_USERNAME  "LMM-TU-001"  // nome do dispositivo cadastrado 
+#define MQTT_USERNAME  "LMM-TU-002"  // nome do dispositivo cadastrado 
 #define MQTT_PASSWORD  ""  // se houver senha cadastrada no broker
 
 /* WIFI */
 const char *ssid_wifi = "IPT-WiFi-Novo";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
-const char *password_wifi = "const@nte"; /*  SENHA DA REDE WIFI */
+const char *password_wifi = "germ@nium"; /*  SENHA DA REDE WIFI */
+
+
 
 /*Configuração para IP fixo caso necessario*/
 //IPAddress ip(192,168,0,175); //COLOQUE UMA FAIXA DE IP DISPONÍVEL DO SEU ROTEADOR. EX: 192.168.1.110 **** ISSO VARIA, NO MEU CASO É: 192.168.0.175
@@ -58,8 +60,8 @@ WiFiClient espClient;
 //const char* broker_mqtt = "mqtt.tago.io"; 
 
 /* endereço do broker MQTT local e respectiva porta para o dispositivo */
-const char* broker_mqtt = "200.18.107.56"; //inserir endereço do broker local
-int broker_port = 1883;  // inserir a porta cadastrada no broker
+const char* broker_mqtt = "200.18.107.229"; //inserir endereço do broker local
+int broker_port = 1882;  // inserir a porta cadastrada no broker
 
 PubSubClient MQTT(espClient); 
 

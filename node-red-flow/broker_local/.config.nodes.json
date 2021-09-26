@@ -1,8 +1,9 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "1.2.9",
+        "version": "2.0.5",
         "local": false,
+        "user": false,
         "nodes": {
             "inject": {
                 "name": "inject",
@@ -11,6 +12,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\20-inject.js"
             },
@@ -21,6 +23,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\21-debug.js"
             },
@@ -31,6 +34,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\24-complete.js"
             },
@@ -41,6 +45,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\25-catch.js"
             },
@@ -51,6 +56,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\25-status.js"
             },
@@ -62,6 +68,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\60-link.js"
             },
@@ -72,6 +79,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\90-comment.js"
             },
@@ -82,6 +90,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\common\\98-unknown.js"
             },
@@ -92,6 +101,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\10-function.js"
             },
@@ -102,6 +112,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\10-switch.js"
             },
@@ -112,6 +123,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\15-change.js"
             },
@@ -122,6 +134,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\16-range.js"
             },
@@ -132,6 +145,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\80-template.js"
             },
@@ -142,6 +156,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\89-delay.js"
             },
@@ -152,6 +167,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\89-trigger.js"
             },
@@ -162,8 +178,20 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\90-exec.js"
+            },
+            "rbe": {
+                "name": "rbe",
+                "types": [
+                    "rbe"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red",
+                "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\function\\rbe.js"
             },
             "tls": {
                 "name": "tls",
@@ -172,6 +200,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\05-tls.js"
             },
@@ -182,6 +211,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\06-httpproxy.js"
             },
@@ -194,6 +224,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\10-mqtt.js"
             },
@@ -205,6 +236,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\21-httpin.js"
             },
@@ -215,6 +247,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\21-httprequest.js"
             },
@@ -228,6 +261,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\22-websocket.js"
             },
@@ -240,6 +274,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\31-tcpin.js"
             },
@@ -251,6 +286,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\network\\32-udp.js"
             },
@@ -261,6 +297,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\parsers\\70-CSV.js"
             },
@@ -271,6 +308,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\parsers\\70-HTML.js"
             },
@@ -281,6 +319,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\parsers\\70-JSON.js"
             },
@@ -291,6 +330,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\parsers\\70-XML.js"
             },
@@ -301,6 +341,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\parsers\\70-YAML.js"
             },
@@ -312,6 +353,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\sequence\\17-split.js"
             },
@@ -322,6 +364,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\sequence\\18-sort.js"
             },
@@ -332,6 +375,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\sequence\\19-batch.js"
             },
@@ -343,6 +387,7 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\storage\\10-file.js"
             },
@@ -353,42 +398,9 @@
                 ],
                 "enabled": true,
                 "local": false,
+                "user": false,
                 "module": "node-red",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes\\core\\storage\\23-watch.js"
-            }
-        }
-    },
-    "node-red-node-rbe": {
-        "name": "node-red-node-rbe",
-        "version": "0.2.9",
-        "local": false,
-        "nodes": {
-            "rbe": {
-                "name": "rbe",
-                "types": [
-                    "rbe"
-                ],
-                "enabled": true,
-                "local": false,
-                "module": "node-red-node-rbe",
-                "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\node-red-node-rbe\\rbe.js"
-            }
-        }
-    },
-    "node-red-node-tail": {
-        "name": "node-red-node-tail",
-        "version": "0.1.1",
-        "local": false,
-        "nodes": {
-            "tail": {
-                "name": "tail",
-                "types": [
-                    "tail"
-                ],
-                "enabled": false,
-                "local": false,
-                "module": "node-red-node-tail",
-                "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\node-red-node-tail\\28-tail.js"
             }
         }
     },
@@ -396,6 +408,7 @@
         "name": "node-red-contrib-mqtt-broker",
         "version": "0.2.5",
         "local": true,
+        "user": true,
         "nodes": {
             "mosca-mqtt-broker": {
                 "name": "mosca-mqtt-broker",
@@ -404,6 +417,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-contrib-mqtt-broker",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-mqtt-broker\\mosca.js"
             }
@@ -413,6 +427,7 @@
         "name": "node-red-dashboard",
         "version": "2.28.1",
         "local": true,
+        "user": true,
         "nodes": {
             "ui_base": {
                 "name": "ui_base",
@@ -421,6 +436,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_base.js"
             },
@@ -431,6 +447,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_button.js"
             },
@@ -441,6 +458,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_dropdown.js"
             },
@@ -451,6 +469,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_switch.js"
             },
@@ -461,6 +480,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_slider.js"
             },
@@ -471,6 +491,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_numeric.js"
             },
@@ -481,6 +502,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_text_input.js"
             },
@@ -491,6 +513,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_date_picker.js"
             },
@@ -501,6 +524,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_colour_picker.js"
             },
@@ -511,6 +535,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_form.js"
             },
@@ -521,6 +546,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_text.js"
             },
@@ -531,6 +557,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_gauge.js"
             },
@@ -541,6 +568,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_chart.js"
             },
@@ -551,6 +579,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_audio.js"
             },
@@ -561,6 +590,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_toast.js"
             },
@@ -571,6 +601,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_ui_control.js"
             },
@@ -581,6 +612,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_template.js"
             },
@@ -591,6 +623,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_link.js"
             },
@@ -601,6 +634,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_tab.js"
             },
@@ -611,6 +645,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_group.js"
             },
@@ -621,6 +656,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-dashboard",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-dashboard\\nodes\\ui_spacer.js"
             }
@@ -630,6 +666,7 @@
         "name": "node-red-node-random",
         "version": "0.3.1",
         "local": true,
+        "user": true,
         "nodes": {
             "random": {
                 "name": "random",
@@ -638,6 +675,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-node-random",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-node-random\\random.js"
             }
@@ -647,6 +685,7 @@
         "name": "node-red-node-ui-table",
         "version": "0.3.10",
         "local": true,
+        "user": true,
         "nodes": {
             "ui_table": {
                 "name": "ui_table",
@@ -655,6 +694,7 @@
                 ],
                 "enabled": false,
                 "local": true,
+                "user": false,
                 "module": "node-red-node-ui-table",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-node-ui-table\\node.js"
             }
@@ -664,6 +704,7 @@
         "name": "node-red-social-aggregator",
         "version": "1.0.5",
         "local": true,
+        "user": true,
         "nodes": {
             "social-aggregator": {
                 "name": "social-aggregator",
@@ -672,6 +713,7 @@
                 ],
                 "enabled": false,
                 "local": true,
+                "user": false,
                 "module": "node-red-social-aggregator",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-social-aggregator\\social-aggregator.js"
             }
@@ -681,6 +723,7 @@
         "name": "node-red-contrib-ui-led",
         "version": "0.3.3",
         "local": true,
+        "user": true,
         "nodes": {
             "ui_led": {
                 "name": "ui_led",
@@ -689,6 +732,7 @@
                 ],
                 "enabled": true,
                 "local": true,
+                "user": false,
                 "module": "node-red-contrib-ui-led",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-ui-led\\led.js"
             }
@@ -698,6 +742,7 @@
         "name": "node-red-contrib-simple-message-queue",
         "version": "0.2.7",
         "local": true,
+        "user": true,
         "nodes": {
             "simple-queue": {
                 "name": "simple-queue",
@@ -706,6 +751,7 @@
                 ],
                 "enabled": false,
                 "local": true,
+                "user": false,
                 "module": "node-red-contrib-simple-message-queue",
                 "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-simple-message-queue\\simple-message-queue.js"
             }
@@ -715,6 +761,7 @@
         "name": "node-red-contrib-cognitive-services",
         "version": "0.5.5",
         "local": false,
+        "user": false,
         "nodes": {
             "computervision": {
                 "name": "computervision",
@@ -723,6 +770,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\computervision.js"
             },
@@ -733,6 +781,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\emotion.js"
             },
@@ -743,6 +792,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\face.js"
             },
@@ -753,6 +803,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\speechToText.js"
             },
@@ -763,6 +814,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\textToSpeech.js"
             },
@@ -773,6 +825,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\spellcheck.js"
             },
@@ -783,6 +836,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\linguisticanalysis.js"
             },
@@ -793,6 +847,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\textanalytics.js"
             },
@@ -803,6 +858,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\translator.js"
             },
@@ -813,6 +869,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\weblm.js"
             },
@@ -823,6 +880,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\imagesearch.js"
             },
@@ -833,6 +891,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\newssearch.js"
             },
@@ -843,6 +902,7 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\videosearch.js"
             },
@@ -853,44 +913,191 @@
                 ],
                 "enabled": false,
                 "local": false,
+                "user": false,
                 "module": "node-red-contrib-cognitive-services",
                 "file": "C:\\Users\\Diego\\AppData\\Roaming\\npm\\node_modules\\node-red-contrib-cognitive-services\\cognitive-services\\websearch.js"
             }
         }
     },
-    "node-red-contrib-ibm-watson-iot": {
-        "name": "node-red-contrib-ibm-watson-iot",
-        "version": "0.2.8",
-        "local": false,
+    "node-red-contrib-aedes": {
+        "name": "node-red-contrib-aedes",
+        "version": "0.5.2",
+        "local": true,
+        "user": true,
         "nodes": {
-            "wiotp": {
-                "name": "wiotp",
+            "aedes-mqtt-broker": {
+                "name": "aedes-mqtt-broker",
                 "types": [
-                    "wiotp-credentials",
-                    "wiotp in",
-                    "wiotp out"
+                    "aedes broker"
                 ],
-                "enabled": false,
-                "local": false,
-                "module": "node-red-contrib-ibm-watson-iot",
-                "file": "C:\\Users\\Diego\\node_modules\\node-red-contrib-ibm-watson-iot\\application\\wiotp.js"
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-aedes",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-aedes\\aedes.js"
             }
         }
     },
-    "node-red-contrib-simpletime": {
-        "name": "node-red-contrib-simpletime",
-        "version": "2.10.0",
-        "local": false,
+    "node-red-contrib-browser-utils": {
+        "name": "node-red-contrib-browser-utils",
+        "version": "0.0.9",
+        "local": true,
+        "user": true,
         "nodes": {
-            "simpletime": {
-                "name": "simpletime",
+            "fileinject": {
+                "name": "fileinject",
                 "types": [
-                    "simpletime"
+                    "fileinject"
                 ],
                 "enabled": true,
-                "local": false,
-                "module": "node-red-contrib-simpletime",
-                "file": "C:\\Users\\Diego\\node_modules\\node-red-contrib-simpletime\\simpletime.js"
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-browser-utils",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-browser-utils\\fileinject\\fileinject.js"
+            },
+            "microphone": {
+                "name": "microphone",
+                "types": [
+                    "microphone"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-browser-utils",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-browser-utils\\microphone\\microphone.js"
+            },
+            "camera": {
+                "name": "camera",
+                "types": [
+                    "camera"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-browser-utils",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-browser-utils\\camera\\camera.js"
+            }
+        }
+    },
+    "node-red-contrib-play-audio": {
+        "name": "node-red-contrib-play-audio",
+        "version": "2.5.0",
+        "local": true,
+        "user": false,
+        "nodes": {
+            "play-audio": {
+                "name": "play-audio",
+                "types": [
+                    "play audio"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-play-audio",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-play-audio\\play-audio.js"
+            }
+        }
+    },
+    "node-red-node-email": {
+        "name": "node-red-node-email",
+        "version": "1.7.11",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "email": {
+                "name": "email",
+                "types": [
+                    "e-mail",
+                    "e-mail in"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-email",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-node-email\\61-email.js"
+            }
+        }
+    },
+    "red-contrib-mobius-flow-thingsboard": {
+        "name": "red-contrib-mobius-flow-thingsboard",
+        "version": "0.0.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mobius thingsboard provision": {
+                "name": "mobius thingsboard provision",
+                "types": [
+                    "mobius thingsboard provision",
+                    "mobius ioffice"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "red-contrib-mobius-flow-thingsboard",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\red-contrib-mobius-flow-thingsboard\\dist\\nodes\\provision-devices.js"
+            }
+        }
+    },
+    "node-red-contrib-mobius-flow-thingsboard": {
+        "name": "node-red-contrib-mobius-flow-thingsboard",
+        "version": "1.0.8",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mobius thingsboard connection": {
+                "name": "mobius thingsboard connection",
+                "types": [
+                    "mobius thingsboard connection"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mobius-flow-thingsboard",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-mobius-flow-thingsboard\\dist\\nodes\\connection-manager.js"
+            },
+            "mobius thingsboard manager": {
+                "name": "mobius thingsboard manager",
+                "types": [
+                    "mobius thingsboard manager"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mobius-flow-thingsboard",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-mobius-flow-thingsboard\\dist\\nodes\\thingsboard-manager.js"
+            },
+            "mobius thingsboard device publish": {
+                "name": "mobius thingsboard device publish",
+                "types": [
+                    "mobius thingsboard device publish"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mobius-flow-thingsboard",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-mobius-flow-thingsboard\\dist\\nodes\\thingsboard-device-publish.js"
+            },
+            "mobius thingsboard asset publish": {
+                "name": "mobius thingsboard asset publish",
+                "types": [
+                    "mobius thingsboard asset publish"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mobius-flow-thingsboard",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-mobius-flow-thingsboard\\dist\\nodes\\thingsboard-asset-publish.js"
+            },
+            "mobius thingsboard attribute subscribe": {
+                "name": "mobius thingsboard attribute subscribe",
+                "types": [
+                    "mobius thingsboard attribute subscribe"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-mobius-flow-thingsboard",
+                "file": "A:\\IPT\\monitor_de_temperatura_labs\\projeto\\node-red-flow\\broker_local\\node_modules\\node-red-contrib-mobius-flow-thingsboard\\dist\\nodes\\thingsboard-attribute-subscribe.js"
             }
         }
     }

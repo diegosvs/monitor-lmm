@@ -4,7 +4,9 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "node-red-contrib-aedes": "~0.5.2",
         "node-red-contrib-browser-utils": "0.0.9",
+        "node-red-contrib-mobius-flow-thingsboard": "~1.0.8",
         "node-red-contrib-mqtt-broker": "~0.2.5",
         "node-red-contrib-simple-message-queue": "~0.2.7",
         "node-red-contrib-ui-led": "~0.3.3",
@@ -12,6 +14,7 @@
         "node-red-node-email": "~1.7.8",
         "node-red-node-random": "~0.3.1",
         "node-red-node-ui-table": "~0.3.10",
-        "node-red-social-aggregator": "~1.0.5"
+        "node-red-social-aggregator": "~1.0.5",
+        "red-contrib-mobius-flow-thingsboard": "~0.0.2"
     }
 }
