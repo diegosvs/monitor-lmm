@@ -43,8 +43,8 @@
 #define MQTT_PASSWORD  ""  // se houver senha cadastrada no broker
 
 /* WIFI */
-const char *ssid_wifi = "IPT-WiFi-Novo";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
-const char *password_wifi = "const@nte"; /*  SENHA DA REDE WIFI */
+const char *ssid_wifi = "IPT-IoT";     /*  INSERIR O NOME DA REDE WIFI QUE O DISPOSITIVO SERÁ CONECTADO */
+const char *password_wifi = "r@cion@l"; /*  SENHA DA REDE WIFI */
 
 /*Configuração para IP fixo caso necessario*/
 //IPAddress ip(192,168,0,175); //COLOQUE UMA FAIXA DE IP DISPONÍVEL DO SEU ROTEADOR. EX: 192.168.1.110 **** ISSO VARIA, NO MEU CASO É: 192.168.0.175
@@ -53,15 +53,20 @@ const char *password_wifi = "const@nte"; /*  SENHA DA REDE WIFI */
 
 WiFiClient espClient;     
 
+
 /* MQTT */
 /* MQTT broker URL */
 //const char* broker_mqtt = "mqtt.tago.io"; 
 
 /* endereço do broker MQTT local e respectiva porta para o dispositivo */
-const char* broker_mqtt = "200.18.107.56"; //inserir endereço do broker local
-int broker_port = 1883;  // inserir a porta cadastrada no broker
+const char* broker_mqtt = "10.5.39.18"; //inserir endereço do broker local
+int broker_port = 1882;  // inserir a porta cadastrada no broker
+
+const char* ad_node = "iothmlsice.ipt.br"; //inserir endereço do broker local
+int node_port = 1883;  // inserir a porta cadastrada no broker
 
 PubSubClient MQTT(espClient); 
+PubSubClient node_broker(espClient); 
 
 /*VARIAVEL GLOBAL PARA TESTE DO LED INTERNO DA PLACA*/
 bool ledteste = false;
@@ -139,6 +144,7 @@ void verify_wifi_connection(void)
 /* Funcao: inicializa variaveis do MQTT para conexao com broker */
 void init_MQTT(void)
 {
+    node_broker.setServer(ad_node, node_port);
     MQTT.setServer(broker_mqtt, broker_port);
     MQTT.setCallback(callback);
 }
@@ -305,8 +311,8 @@ void setup()
     //threadFuncaoDashboard.onRun(send_data_nodered);
 
     /*Adiciona cada funcao das threads ao objeto cpu para que sejam executadas de acordo com o intervalo estabelecido*/
-    //cpu.add(&threadFuncaoTago);
-    //cpu.add(&threadFuncaoDashboard);
+    // cpu.add(&threadFuncaoTago);
+    // cpu.add(&threadFuncaoDashboard);
   }
 
 void loop() 
@@ -324,8 +330,11 @@ void loop()
     /* Faz o envio da temperatura e umidade para a plataforma IoT (Tago.io) */   
     //send_data_tago();  
     //delay(TEMPO_ENVIO_INFORMACOES);
+
+  //   float temperatura_lida = dht.readTemperature();
+  //  float umidade_lida = dht.readHumidity();
     
     /* Faz o envio da temperatura e umidade para o dashboard no node-red */
-    //send_data_nodered();
-    //delay(TEMPO_ENVIO_INFORMACOES);
+    // send_data_nodered();
+    // delay(TEMPO_ENVIO_INFORMACOES);
   }
